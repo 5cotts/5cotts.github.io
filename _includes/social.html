@@ -1,0 +1,17 @@
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+{%- assign separator = " | " -%}
+
+<span class="social-media-list">
+    <b>[</b>
+
+    <a href="mailto:{{ site.email }}"><i class="mail-icon fas fa-envelope"></i></a>
+    <span>{{separator}}</span>
+
+    <a href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg></a>
+    <span>{{separator}}</span>
+
+    <a href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg></a>
+
+    <b>]</b>
+</span>

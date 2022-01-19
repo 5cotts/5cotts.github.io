@@ -1,0 +1,107 @@
+---
+layout: page
+title: Resume
+permalink: /resume/
+hidden: false
+---
+
+<center><h3>about</h3></center>
+Software engineer with over two years experience building products from the ground up. A team player,
+who is comfortable working independently and with others. Especially adept at facilitating conversation between
+engineering and product teams to help engineers understand business requirements and help product
+managers understand the work that goes into building and maintaining software.
+
+Most of my experience lies in back-end programming, where I have developed algorithms which support mission
+critical processes such as ETL pipelines, data merging, and data analysis.
+I have also worked on building front-ends, APIs, and microservices and have experience in cloud administration,
+database administration, Linux systems administration, and DevOps pipeline administration.
+
+<center><h3>technical competencies</h3></center>
+<ul>
+    <li><i>CI/CD:</i> CircleCI, GitHub Actions</li>
+    <li><i>Cloud:</i> AWS (DMS, EC2, ECR, ECS, RDS, Route 53, S3)</li>
+    <li><i>Containers:</i> Docker</li>
+    <li><i>Data Stores:</i> Apache Parquet, CSV, DynamoDB, ElasticSearch, PostgreSQL, Redis</li>
+    <li><i>Frameworks:</i> Django, Flask, Material UI, React</li>
+    <li><i>Languages:</i> Bash, CSS, HTML, JavaScript, Python, SQL</li>
+</ul>
+
+<center><h3>work experience</h3></center>
+<h3>WireScreen | <a href="https://wirescreen.ai">wirescreen.ai</a></h3>
+<h4>Engineering Team Lead | 01/2020-12/2021</h4>
+Working directly under the CTO, I help lead a small group of engineers. We are currently iterating on the
+beta prototype of the product. In addition to writing code, I also conduct code reviews,
+architect new services/features, and act as liaison between engineering and product teams
+to help translate business needs into engineering outcomes.
+
+More detailed examples of what I have done include:
+<ul>
+    <li>
+        With input from the CTO, architected all infrastructure on AWS for the company. The current compute
+        infrastructure I oversee includes five ECS clusters, with each cluster executing a multitude of
+        different tasks and services on over 60 EC2 instances. Code deploys are applied to each ECS
+        cluster via Docker images stored in ECR. Code deploys are executed in GitHub Actions
+        using workflow templates I wrote. Each build not only creates a new Docker image, but runs unit
+        tests with the new code before the deploy is allowed to pass. The data infrastructure I manage
+        includes 8 RDS instances, 2 ElasticSearch clusters, 2
+        Redis caches, and over 3TB of files stored on S3. One task I was proud of in this area was
+        using DMS to create live serving mirrors
+        of our product databases which our products are pointed to. This ensures that our resource intensive ETL
+        processing jobs do not cause our main product to slowdown.
+    </li>
+    <li>
+        Wrote web scrapers in Python using various tools such as Selenium, BeautifulSoup, and Requests in
+        order to download and store data in S3 coming from different kinds of data stores
+        (e.g., embedded in HTML, stored in API responses, stored in CSVs, etc.). Also. maintain a look up
+        table in Postgres which contains metadata about each scrape and it's location in S3 so that scrapes
+        are queryable by other steps in our ETL pipelines.
+    </li>
+    <li>
+        Built and manage multiple internal web apps that allow non-technical users to complete various tasks
+        pertinent to the company. Examples of such tasks include submitting and editing data that is
+        viewable on the product and orchestrating what the suite of web scrapers (mentioned above) should
+        scrape and when. These apps were built with Python using a combination Flask, uWSGI, and Jinja.
+    </li>
+    <li>
+        Also built and manage micro-services for internal use by engineers. One such service is one that can
+        translate Chinese strings into English using an in-house data store which was built upon
+        Google Translate API data and internal-user submitted translations. These services were also
+        created using Flask, uWSGI, and Jinja, but with the addition of Flask JSON-RPC to expose an API
+        layer.
+    </li>
+    <li>
+        Wrote multiple scripts in Python to support the ETL pipeline that takes our raw scraped data and turns
+        it into something our product uses. Over time, have consistently iterated on these scripts to decrease
+        run time. Most recently, I have been converting these tasks to be parallel processes using Python's
+        Multiprocessing library.
+    </li>
+    <li>
+        A lot of data we store contains relationships between entities. I wrote code that traverses this data
+        to find nodes for which we are lacking sufficient information (e.g, we may know the name of a node,
+        but don't have all it's metadata). Wrote a separate process that then takes these incomplete nodes and
+        queues them for scraping by our web scrapers using another micro-service I wrote.
+    </li>
+    <li>
+        Will occasionally add new front-end features to our main product using JavaScript. The main product is
+        a Django web app with a Python back-end and JavaScript front-end.
+    </li>
+</ul>
+
+<h4>Software Engineer | 05/2019-01/2020</h4>
+This was a multi-faceted full stack position where I worked across both research and engineering functions
+to help build the product using an Agile method of development. With a small team, we built the alpha
+prototype which led to a seed investment by a venture capital firm.
+
+<h4>Research Assistant | 02/2019-05/2019</h4>
+Worked part-time while continuing to take college classes. Responsibilities included strategic planning and
+development of business/product processes using a combination of qualitative research and data analysis.
+
+<center><h3>personal projects</h3></center>
+<h3>Private Chat Server | <a href="https://friends.scottschmidt.io">friends.scottschmidt.io</a></h3>
+Using the open source <a href="https://rocket.chat/">Rocket.Chat</a> platform, I manage my own private chat
+server on AWS to keep in touch with my friends. I was inspired to do this in order to keep my digital footprint
+more secure and in my control.
+
+<center><h3>education</h3></center>
+Bachelor's Degree in Economics & Business Administration from
+<a href="https://www.northeastern.edu/">Northeastern University</a> (12/2018)
