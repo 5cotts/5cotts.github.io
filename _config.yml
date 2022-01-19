@@ -22,7 +22,7 @@ author: scott schmidt
 title: scott schmidt
 email: s@scottschmidt.io
 description: software engineer
-url: https://scottschmidt.io # the base hostname & protocol for your site, e.g. http://example.com
+url: https://scottschmidt.io
 github_username:  5cotts
 linkedin_username: 5cotts
 
@@ -31,10 +31,9 @@ theme: minima
 plugins:
   - jekyll-feed
 
-# So that Font Awesome works.
-# https://github.com/drewish/jekyll-font-awesome-sass
-font-awesome:
-  assets: true
+# Google Analytics
+# https://desiredpersona.com/google-analytics-jekyll/
+google_analytics: G-94190WCYYY
 
 # Exclude from processing.
 # The following items will not be processed, by default.
