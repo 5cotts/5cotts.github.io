@@ -1,0 +1,108 @@
+{
+    "entity": {
+        "name": "John Doe",
+        "title": "Engineer",
+        "about": "A decent software engineer, with a degree in electrical engineering, who dabbles in hardware and electronics."
+    },
+    "sections": [
+        {
+            "title": "Technical Competencies",
+            "data": [
+                {
+                    "skill": "Electronics",
+                    "examples": ["Microchips", "Controllers", "Soldering"]
+                },
+                {
+                    "skill": "Languages",
+                    "examples": ["Assembly", "C/C++", "Fortran"]
+                },
+                {
+                    "skill": "Software",
+                    "examples": ["AutoCAD", "Microsoft Office"]
+                }
+            ]
+        },
+        {
+            "title": "Work Experience",
+            "data": [
+                {
+                    "companyName": "M-Systems Inc.",
+                    "companyUrl": "https://msiled.com/",
+                    "positions": [
+                        {
+                            "title": "Engineer",
+                            "startDate": "01/2015",
+                            "endDate": "present",
+                            "blurb": "Full-time engineer, working on both software and electrical components.",
+                            "bulletPoints": [
+                                "Developed a motion activated electronic control using a time of flight sensor to replace push buttons for crosswalks at intersections.",
+                                "Produced an electronic widget that detects nearby lightning strikes. Reports the distance of the strike to the user via a set of multi-colored LEDs, with each LED representing the distance."
+                            ]
+                        },
+                        {
+                            "title": "Intern",
+                            "startDate": "08/2014",
+                            "endDate": "12/2014",
+                            "blurb": "Worked part-time while finishing my degree.",
+                            "bulletPoints": [
+                                "Wrote code in C/C++ for electronic controllers.",
+                                "Learned how to use a soldering iron."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "companyName": "Wollaston's Market",
+                    "companyUrl": "https://www.wollastonsmarket.com/",
+                    "positions": [
+                        {
+                            "title": "Cashier",
+                            "startDate": "01/2010",
+                            "endDate": "07/2014",
+                            "blurb": "Worked part-time as a cashier while pursuing my bachelor's degree.",
+                            "bulletPoints": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Personal Projects",
+            "data": []
+        },
+        {
+            "title": "Education",
+            "data": [
+                {
+                    "eduName": "Electrical Engineering",
+                    "eduLevel": "Bachelor's Degree",
+                    "eduInstitution": "University of Foobarbaz",
+                    "eduUrl": "https://stackoverflow.com/questions/34212049/meaning-of-foo-bar-baz-etc",
+                    "startDate": "01/2010",
+                    "endDate": "12/2014"
+                },
+                {
+                    "eduName": "Computer Science",
+                    "eduLevel": "Master's Degree",
+                    "eduInstitution": "University of Foobarbaz",
+                    "eduUrl": "https://stackoverflow.com/questions/34212049/meaning-of-foo-bar-baz-etc",
+                    "startDate": "09/2022",
+                    "endDate": null
+                }
+            ]
+        },
+        {
+            "title": "Other Pursuits",
+            "data": [
+                {
+                    "pursuitName": "Professional Race Car Driver",
+                    "blurb": "I always enjoyed cars and becoming a race car driver has been a dream of mine for a while now. On the weekends, I practice racing skills on the track. Hoping someday I can become a professional driver."
+                },
+                {
+                    "pursuitName": "Professional Snowboarder",
+                    "blurb": "Have been shredding the pow since I was 7 years old. Every winter I improve my skills."
+                }
+            ]
+        }
+    ]
+}

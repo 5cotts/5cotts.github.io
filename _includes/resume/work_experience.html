@@ -1,0 +1,17 @@
+<div>
+    {% include resume/section_header.html text=include.title %}
+    {% for w in include.work_experience %}
+        <h4>{{ w.companyName }} | <a href="{{ w.companyUrl }}">{{ w.companyUrl }}</a></h4>
+        {% for p in w.positions %}
+            <h4>{{ p.title }} | {{ p.startDate }}-{{ p.endDate }}</h4>
+            {{ p.blurb }}
+            {% if p.bulletPoints %}
+                <ul>
+                    {% for b in p.bulletPoints %}
+                        <li>{{ b }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</div>

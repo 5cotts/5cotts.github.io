@@ -1,0 +1,14 @@
+<div>
+    {% include resume/section_header.html text=include.title %}
+    {% for e in include.education %}
+        <h4>{{ e.eduLevel }} | <a href="{{ e.eduUrl }}">{{ e.eduInstitution }}</a>{% unless e.endDate %} | <i>currently pursuing</i> {% endunless %}</h4>
+        <ul>
+            <li>{{ e.eduName }}</li>
+            {% if e.endDate %}
+                <li>Degree Received {{ e.endDate }}</li>
+            {% else %}
+                <li>Degree Started {{ e.startDate }}</li>
+            {% endif %}
+        </ul>
+    {% endfor %}
+</div>

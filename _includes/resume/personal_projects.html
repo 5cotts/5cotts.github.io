@@ -1,0 +1,8 @@
+<div>
+    {% include resume/section_header.html text=include.title %}
+    {% for p in include.personal_projects %}
+        <h4>{{ p.projectName }} | <a href="{{ p.projectUrl }}">{{ p.projectUrl }}</a></h4>
+            {{ p.blurb }}
+            <br>
+    {% endfor %}
+</div>

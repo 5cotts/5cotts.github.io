@@ -1,0 +1,10 @@
+{% if jekyll.environment == "development" %}
+    {% assign resume = site.data.test_resume %}
+{% else %}
+    {% assign resume = site.data.resume %}
+{% endif %}
+
+<div>
+    {% include resume/header.html %}
+    {% include resume/sections.html %}
+</div>
