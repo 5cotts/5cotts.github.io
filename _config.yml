@@ -23,7 +23,7 @@ title: scott schmidt
 email: s@scottschmidt.io
 description: software engineer
 url: https://scottschmidt.io
-github_username:  5cotts
+github_username: 5cotts
 linkedin_username: 5cotts
 
 # Build settings
@@ -35,7 +35,7 @@ plugins:
 # https://desiredpersona.com/google-analytics-jekyll/
 google_analytics: G-94190WCYYY
 
-data_source: data
+data_dir: data
 
 # Exclude from processing.
 # The following items will not be processed, by default.
