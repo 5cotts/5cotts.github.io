@@ -93,9 +93,11 @@ $(document).ready(function() {
     };
 
     var workExperienceSection = function() {
-        if (workExperience && workExperience.length) {
-            content.push(sectionHeading('work experience'));
+        if (!workExperience || !workExperience.length) {
+            return;
         };
+
+        content.push(sectionHeading('work experience'));
 
         $.each(workExperience, function(i, job) {
             content.push({ text: job['companyName'], style: 'company_name' });
@@ -115,10 +117,12 @@ $(document).ready(function() {
     }
 
     var personProjectsSection = function() {
-        if (personalProjects && personalProjects.length) {
-            var personalProjectsHeading = sectionHeading('personal projects');
-            content.push(personalProjectsHeading);
+        if (!personalProjects || !personalProjects.length) {
+          return;
         };
+
+        var personalProjectsHeading = sectionHeading('personal projects');
+        content.push(personalProjectsHeading);
 
         $.each(personalProjects, function(i, project) {
             content.push({
@@ -144,10 +148,12 @@ $(document).ready(function() {
     }
 
     var technicalCompetenciesSection = function() {
-        if (technicalCompetencies && technicalCompetencies.length) {
-            content.push(sectionHeading('technical competencies'));
+        if (!technicalCompetencies || !technicalCompetencies.length) {
+            return;
         };
 
+        content.push(sectionHeading('technical competencies'));
+        
         var skillsTable = [[],[]]; 
 
         $.each(technicalCompetencies, function(i, skillsData) {
@@ -166,9 +172,11 @@ $(document).ready(function() {
     }
 
     var eduSection = function() {
-        if (education && education.length) {
-            content.push(sectionHeading('education'));
+        if (!education || !education.length) {
+            return;
         };
+
+        content.push(sectionHeading('education'));
 
         $.each(education, function(i, edu) {
             if (edu['endDate']) {
