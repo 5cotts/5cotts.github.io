@@ -148,11 +148,7 @@ $(document).ready(function() {
             content.push(sectionHeading('technical competencies'));
         };
 
-        var skillsTable = [[],[]];        {
-            "projectName": "Private Chat Server",
-            "projectUrl": "https://friends.scottschmidt.io/",
-            "blurb": "Using the open source Rocket.Chat platform, I manage my own private chat server on AWS to keep in touch with my friends. I was inspired to do this in order to keep my digital footprint more secure and in my control."
-        } 
+        var skillsTable = [[],[]]; 
 
         $.each(technicalCompetencies, function(i, skillsData) {
             skillsTable[0].push([{ text: skillsData['skill'], style: 'project_heading'}]);
