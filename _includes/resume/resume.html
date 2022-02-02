@@ -1,10 +1,29 @@
 {% if jekyll.environment == "development" %}
     {% assign resume = site.data.test_resume %}
+    {% capture resume_path %}
+        {{ site.url }}/data/test_resume.json
+    {% endcapture %}
 {% else %}
     {% assign resume = site.data.resume %}
+    {% capture resume_path %}
+        {{ site.url }}/data/resume.json
+    {% endcapture %}
 {% endif %}
 
-<div>
-    {% include resume/header.html %}
-    {% include resume/sections.html %}
+<button data-toggle="download-pdf">Download my resume</button>
+
+{% comment %} 
+    TODO(Scott): I feel like this could be an API call. 
+{% endcomment %}
+<div hidden id="resumeJson">
+    {{ resume | jsonify }}
 </div>
+
+{% comment %}
+    Decided not to put the below scripts in `_includes/head.html` since they are only used for the
+    resume page. Perhaps it would be beneficial to change this some day, especially for jQuery.
+{% endcomment %}
+<script defer src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script defer src="{{ site.url }}/vendor/pdfmake/pdfmake.min.js"></script>
+<script defer src="{{ site.url }}/vendor/pdfmake/vfs_fonts.js"></script>
+<script defer src="{{ site.url }}/assets/resume.js"></script>
