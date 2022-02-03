@@ -34,6 +34,12 @@ $(document).ready(function() {
           fontSize: 15,
           bold: true
         },
+        bullet_point: {
+          fontSize: 11,
+        },
+        link: {
+          color: 'blue',
+        },
       }
     };
 
@@ -83,13 +89,11 @@ $(document).ready(function() {
             stack: [
                 { text: resumeContent['title'].toLowerCase(), italics: true },
                 { text: resumeContent['email'] },
-                { text: shortUrl(resumeContent['website']), link: resumeContent['website'] },
+                { text: shortUrl(resumeContent['website']), link: resumeContent['website'], style: 'link' },
             ],
             alignment: 'right',
             margin: [0, -45, 0, 0]
         });
-
-        headerLine();
     };
 
     var workExperienceSection = function() {
@@ -100,7 +104,14 @@ $(document).ready(function() {
         content.push(sectionHeading('work experience'));
 
         $.each(workExperience, function(i, job) {
-            content.push({ text: job['companyName'], style: 'company_name' });
+            content.push({
+              text: [
+                { text: job['companyName'], style: 'company_name' },
+                { text: ' | ', bold: true }, 
+                { text: shortUrl(job['companyUrl']), link: job['companyUrl'], style: 'link'},
+              ]
+            })
+
             $.each(job['positions'], function(i, position) {
                 content.push({
                     text: [
@@ -110,7 +121,13 @@ $(document).ready(function() {
                     ]
                     });
                     content.push({ text: position['blurb'], margin: [0, 5, 0, 0]});
-                    content.push(list(position['bulletPoints']));
+
+                    var ulArray = [];
+                    position['bulletPoints'].forEach(function(bulletPoint) {
+                      ulArray.push({ text: bulletPoint, style: 'bullet_point'});
+                    });
+                    content.push(list(ulArray));
+
                     content.push('\n');
                 });
         });
@@ -125,25 +142,29 @@ $(document).ready(function() {
         content.push(personalProjectsHeading);
 
         $.each(personalProjects, function(i, project) {
+          if (project['projectUrl']) {
             content.push({
-                stack: [
-                { text: project['projectName'], style: 'project_heading' },
+              stack: [
+                {
+                  text: [
+                    { text: project['projectName'], style: 'project_heading' },
+                    { text: ' | ', bold: true }, 
+                    { text: shortUrl(project['projectUrl']), link: project['projectUrl'], style: 'link' },
+                  ]
+                },
                 { text: project['blurb'], margin: [0, 5, 0, 0] }
-                ],
-                margin: [0, 15, 0, 5]
+              ],
+              margin: [0, 15, 0, 5]
             });
-
-            var items = []
-            if (project['projectUrl']) {
-                items.push({
-                    text: [
-                        { text: 'Project URL: ', bold: true },
-                        { text: shortUrl(project['projectUrl']) , link: project['projectUrl'] }
-                    ]
-                });
-            }
-
-            content.push(list(items));
+          } else {
+            content.push({
+              stack: [
+                { text: project['projectName'], style: 'project_heading' },
+                { text: project['blurb'], margin: [0, 5, 0, 0] },
+              ],
+              margin: [0, 15, 0, 5]
+            });
+          }
         });
     }
 
@@ -154,16 +175,18 @@ $(document).ready(function() {
 
         content.push(sectionHeading('technical competencies'));
         
-        var skillsTable = [[],[]]; 
+        var skillsTable = [[],[]];
+        var widthsArray = [];
 
         $.each(technicalCompetencies, function(i, skillsData) {
             skillsTable[0].push([{ text: skillsData['skill'], style: 'project_heading'}]);
             skillsTable[1].push([{ stack: skillsData['examples'] }]);
+            widthsArray.push('*')
         });
 
         content.push({
             table: {
-                widths: ['*', '*', '*', '*'],
+                widths: widthsArray,
                 body: skillsTable
             },
             margin: [0, 10, 0, 0],
@@ -202,9 +225,13 @@ $(document).ready(function() {
     // TODO(Scott): Each of these functions below should take content as an argument,
     // and the respective section's data.
     header();
+    headerLine();
     workExperienceSection();
+    dashedHeaderLine();
     personProjectsSection();
+    dashedHeaderLine();
     technicalCompetenciesSection();
+    dashedHeaderLine();
     eduSection();
 
     return pdfMake.createPdf(docDefinition).download('resume.pdf');
