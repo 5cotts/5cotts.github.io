@@ -19,7 +19,7 @@
         },
         {
             "skill": "Data Stores",
-            "examples": ["Apache Parquet", "CSV", "ElasticSearch", "PostgreSQL", "Redis"]
+            "examples": ["Parquet", "CSV", "ElasticSearch", "PostgreSQL", "Redis"]
         },
         {
             "skill": "Frameworks",
