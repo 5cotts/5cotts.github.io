@@ -228,6 +228,8 @@
      }
  }
 
+ .selector { cursor: pointer; }
+
  .svg-icon:hover {fill: black;}
 
  .mail-icon {
@@ -265,6 +267,7 @@
    }
    th, td {
      padding: ($spacing-unit / 3) ($spacing-unit / 2);
+     text-align: center;
    }
    th {
      background-color: lighten($grey-color-light, 3%);
