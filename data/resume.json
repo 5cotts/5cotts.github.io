@@ -3,7 +3,7 @@
     "title": "Software Engineer",
     "email": "s@scottschmidt.io",
     "website": "https://scottschmidt.io",
-    "about": "Software engineer with over two years experience building products from the ground up. A team player, who is comfortable working independently and with others. Especially adept at facilitating conversation between engineering and product teams to help engineers understand business requirements and help product managers understand the work that goes into building and maintaining software.<br><br>Most of my experience lies in back-end programming, where I have developed algorithms which support mission critical processes such as ETL pipelines, data merging, and data analysis. I have also worked on building front-ends, APIs, and microservices and have experience in cloud administration, database administration, Linux systems administration, and DevOps pipeline administration.",
+    "about": "Software engineer with over two years experience building products from the ground up. A team player, who is comfortable working independently and with others. Especially adept at facilitating conversation between engineering and product teams to help engineers understand business requirements and help product managers understand the work that goes into building and maintaining software. Most of my experience lies in back-end programming, where I have developed algorithms which support mission critical processes such as ETL pipelines, data merging, and data analysis. I have also worked on building front-ends, APIs, and microservices and have experience in cloud administration, database administration, Linux systems administration, and DevOps pipeline administration.",
     "technicalCompetencies": [
         {
             "skill": "CI/CD",
