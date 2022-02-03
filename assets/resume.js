@@ -99,6 +99,10 @@ $(document).ready(function() {
         });
     };
 
+    var about = function() {
+      content.push({ text: resumeContent['about'], italics: true, margin: [0, 5, 0, 0] });
+    };
+
     var workExperienceSection = function() {
         if (!workExperience || !workExperience.length) {
             return;
@@ -229,6 +233,7 @@ $(document).ready(function() {
     // and the respective section's data.
     header();
     headerLine();
+    about();
     workExperienceSection();
     dashedHeaderLine();
     personProjectsSection();
