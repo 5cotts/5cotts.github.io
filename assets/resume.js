@@ -1,3 +1,6 @@
+// Inspired by:
+// https://thetizzo.com/howto/2018/01/02/building-an-online-resume-with-jekyll-and-pdfmake
+//
 // TODO(Scott): May want to manually add line breaks. Or figure out dynamic line breaks.
 // Otherwise, the resume might get split in strange positions.
 
