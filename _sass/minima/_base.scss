@@ -214,6 +214,18 @@
      display: inline-block;
      fill: #{$grey-color};
      vertical-align: text-top;
+
+     &-medium {
+       @extend .svg-icon;
+       width: 32px;
+       height: 32px;
+     }
+
+     &-large {
+       @extend .svg-icon;
+       width: 64px;
+       height: 64px;
+     }
  }
 
  .svg-icon:hover {fill: black;}
