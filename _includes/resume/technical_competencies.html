@@ -1,8 +1,0 @@
-<div>
-    {% include resume/section_header.html text=include.title %}
-    <ul>
-    {% for c in include.competencies %}
-        <li><i>{{ c.skill }}:&nbsp;</i>{{ c.examples | join: ", " }}</li>
-    {% endfor %}
-    </ul>
-</div>

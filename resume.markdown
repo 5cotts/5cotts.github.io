@@ -4,4 +4,4 @@ title: Resume
 permalink: /resume/
 hidden: false
 ---
-{% include resume/resume.html %}
+{% include resume.html %}
