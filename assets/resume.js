@@ -8,15 +8,36 @@
 
 $(document).ready(function() {
   var generateResume = function() {
+    const d = new Date();
+
     var resumeContent = $.parseJSON($('#resumeJson').text());
     var technicalCompetencies = resumeContent['technicalCompetencies'];
     var workExperience = resumeContent['workExperience'];
     var personalProjects = resumeContent['personalProjects'];
     var education = resumeContent['education'];
 
+    var shortDate = function(dateObj, separator) {
+      // Month is zero indexed.
+      const [month, day, year] = [dateObj.getMonth() + 1, dateObj.getDate(), dateObj.getFullYear()];
+      return year + separator + month + separator + day;
+    }
+
+    var footer = function(dateObj) {
+      return { 
+        text: 'Generated ' + shortDate(dateObj, '/'),
+        italics: true, 
+        alignment: 'right', 
+        margin: [0, 0, 45, 0],
+        fontSize: 10,
+      };
+    }
+
     var docDefinition = {
       content: [],
-      // TODO(Scott): Add a style for URL links?
+      footer: function(currentPage, pageCount) {                 
+        if (currentPage == pageCount)
+            return footer(d);
+      },
       styles: {
         name: {
           fontSize: 40,
@@ -86,6 +107,9 @@ $(document).ready(function() {
     }
 
     var header = function() {
+      if (!resumeContent || !resumeContent['name']) {
+        return 0;
+      }
         content.push({ text: resumeContent['name'].toLowerCase(), style: 'name'});
 
         content.push({
@@ -97,15 +121,22 @@ $(document).ready(function() {
             alignment: 'right',
             margin: [0, -45, 0, 0]
         });
+      
+      return 1;
     };
 
     var about = function() {
+      if (!resumeContent || !resumeContent['about']) {
+        return 0;
+      }
+
       content.push({ text: resumeContent['about'], italics: true, margin: [0, 5, 0, 0] });
+      return 1;
     };
 
     var workExperienceSection = function() {
         if (!workExperience || !workExperience.length) {
-            return;
+            return 0;
         };
 
         content.push(sectionHeading('work experience'));
@@ -138,11 +169,13 @@ $(document).ready(function() {
                     content.push('\n');
                 });
         });
+
+        return 1;
     }
 
     var personProjectsSection = function() {
         if (!personalProjects || !personalProjects.length) {
-          return;
+          return 0;
         };
 
         var personalProjectsHeading = sectionHeading('personal projects');
@@ -173,11 +206,13 @@ $(document).ready(function() {
             });
           }
         });
+
+        return 1;
     }
 
     var technicalCompetenciesSection = function() {
         if (!technicalCompetencies || !technicalCompetencies.length) {
-            return;
+            return 0;
         };
 
         content.push(sectionHeading('technical competencies'));
@@ -199,11 +234,13 @@ $(document).ready(function() {
             margin: [0, 10, 0, 0],
             layout: 'noBorders'
         });
+
+        return 1;
     }
 
     var eduSection = function() {
         if (!education || !education.length) {
-            return;
+            return 0;
         };
 
         content.push(sectionHeading('education'));
@@ -227,22 +264,33 @@ $(document).ready(function() {
                 margin: [0, 15, 0, 0]
             });
         });
+
+        return 1;
     }
 
-    // TODO(Scott): Each of these functions below should take content as an argument,
+    // TODO(Scott): Each of these functions below could take content as an argument,
     // and the respective section's data.
-    header();
-    headerLine();
-    about();
-    workExperienceSection();
-    dashedHeaderLine();
-    personProjectsSection();
-    dashedHeaderLine();
-    technicalCompetenciesSection();
-    dashedHeaderLine();
-    eduSection();
+    // Add more sections to the below if necessary.
+    var orderedSectionSeparatorPairs = [
+      [header, headerLine],
+      [about, null],
+      [workExperienceSection, dashedHeaderLine],
+      [personProjectsSection, dashedHeaderLine],
+      [technicalCompetenciesSection, dashedHeaderLine],
+      [eduSection, headerLine],
+    ];
 
-    return pdfMake.createPdf(docDefinition).download('resume.pdf');
+    orderedSectionSeparatorPairs.forEach(function (pair) {
+      var [sectionGenerator, separatorGenerator] = [pair[0], pair[1]];
+      var is_generated = sectionGenerator();
+      if (is_generated) {
+        if (separatorGenerator) {
+          separatorGenerator();
+        }
+      }
+    })
+
+    return pdfMake.createPdf(docDefinition).download('resume_' + shortDate(d, '_') + '.pdf');
   };
 
   $('[data-toggle=download-pdf]').on('click', function(e) {
