@@ -7,7 +7,7 @@
     "technicalCompetencies": [
         {
             "skill": "CI/CD",
-            "examples": ["GitHub Actions"]
+            "examples": ["CircleCI", "GitHub Actions"]
         },
         {
             "skill": "Cloud",
@@ -19,7 +19,7 @@
         },
         {
             "skill": "Data Stores",
-            "examples": ["Parquet", "CSV", "ElasticSearch", "PostgreSQL", "Redis"]
+            "examples": ["CSV", "ElasticSearch", "JSON", "Parquet", "PostgreSQL", "Redis"]
         },
         {
             "skill": "Frameworks",
@@ -27,7 +27,7 @@
         },
         {
             "skill": "Languages",
-            "examples": ["Bash", "CSS", "HTML", "JavaScript", "Python", "SQL"]
+            "examples": ["Bash", "CSS", "HTML", "JavaScript", "Python", "R", "SQL"]
         }
     ],
     "workExperience": [
