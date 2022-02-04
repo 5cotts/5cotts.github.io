@@ -2,6 +2,6 @@
 layout: page
 title: Resume
 permalink: /resume/
-hidden: false
+hidden: true
 ---
 {% include resume.html %}
