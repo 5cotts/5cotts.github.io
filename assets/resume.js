@@ -1,8 +1,5 @@
 // Inspired by:
 // https://thetizzo.com/howto/2018/01/02/building-an-online-resume-with-jekyll-and-pdfmake
-//
-// TODO(Scott): May want to manually add line breaks. Or figure out dynamic line breaks.
-// Otherwise, the resume might get split in strange positions.
 
 'use strict';
 
@@ -37,6 +34,10 @@ $(document).ready(function() {
       footer: function(currentPage, pageCount) {                 
         if (currentPage == pageCount)
             return footer(d);
+      },
+      // https://github.com/bpampuch/pdfmake/issues/892
+      pageBreakBefore(currentNode, followingNodesOnPage, nodesOnNextPage, previousNodesOnPage) {
+        return currentNode.pageNumbers.length > 1 && currentNode.unbreakable;
       },
       styles: {
         name: {
@@ -214,8 +215,6 @@ $(document).ready(function() {
         if (!technicalCompetencies || !technicalCompetencies.length) {
             return 0;
         };
-
-        content.push(sectionHeading('technical competencies'));
         
         var skillsTable = [[],[]];
         var widthsArray = [];
@@ -226,16 +225,23 @@ $(document).ready(function() {
             widthsArray.push('*')
         });
 
+        // TODO(Scott): Should all sections be stacks?
         content.push({
-            table: {
-                widths: widthsArray,
-                body: skillsTable
-            },
-            margin: [0, 10, 0, 0],
-            layout: 'noBorders'
+          stack: [
+            sectionHeading('technical competencies'),
+            {
+              table: {
+                  widths: widthsArray,
+                  body: skillsTable,
+              },
+              margin: [0, 10, 0, 0],
+              layout: 'noBorders',
+            }
+          ],
+          unbreakable: true,
         });
 
-        return 1;
+      return 1;
     }
 
     var eduSection = function() {
