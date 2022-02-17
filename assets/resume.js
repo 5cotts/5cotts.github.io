@@ -231,21 +231,17 @@ $(document).ready(function() {
             sectionHeading('technical competencies'),
             {
               table: {
-                  title: "Hello, world!",
                   widths: widthsArray,
                   body: skillsTable,
-                  // https://stackoverflow.com/questions/45676698/tables-in-pdfmake-js-and-page-break-how-to-delete-bottom-empty-row
-                  headerRows: 1,
-                  keepWithHeaderRows: true,
-                  dontBreakRows: true,
               },
               margin: [0, 10, 0, 0],
               layout: 'noBorders',
-            }],
-            unbreakable: true,
-          });
-
-        return 1;
+            }
+          ],
+          unbreakable: true,
+        });
+        
+      return 1;
     }
 
     var eduSection = function() {
