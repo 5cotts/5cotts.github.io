@@ -240,7 +240,7 @@ $(document).ready(function() {
           ],
           unbreakable: true,
         });
-        
+
       return 1;
     }
 
