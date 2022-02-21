@@ -1,0 +1,42 @@
+---
+layout: post
+title:  "Week 0 at RC"
+date:   2022-02-20 16:25:00 -0500
+categories: post rc
+---
+{% include rc_blog_post_header.html %}
+
+# New Beginnings
+February 14, 2022 was the day I began my virtual adventure with the Recurse Center. Even though I had received some helpful onboarding advice from other Recursers, I was still uncertain how the first week would go. How would I meet my batch mates? How would collaborating and communicating virtually all day work? Thankfully, the RC staff hosted a great line-up of various virtual events and orientations that made me feel right at home. Below, I'll outline my biggest takeaways from the first week, as well as brief descriptions about the coding I was able to do.
+
+# A New Community
+The biggest surprise of the first week for me was just how friendly and social everybody is. I am surprised to say that I spent almost 20 hours of my fist week talking or collaborating with others. This is a lot more time than I usually spend communicating with others. However, I didn't feel drained by this. I was excited to learn something new from each Zoom call I attended.
+
+By the time Friday came around and I attended the weekly presentations meeting, where current Recursers and alumni gather to learn about what people have been working on, I saw that I had gained a new community. Watching other Recursers volunteer to present and get excited about what they were talking about was amazing to see. It was the first time in a while that I saw people speak so passionately about things that interested them. I will make sure to present at one of these events in the near future.
+
+# Getting Back in the Pairing Groove
+One of the welcome events included a workshop on how to pair program. After going over the fundamentals of pairing, we were matched with a partner and asked to pair on the [Game of Life](https://en.wikipedia.org/wiki/Conway's_Game_of_Life). 
+
+My partner and I have been working on [this](https://github.com/stvsmth/conway-life-py) a little bit day-by-day and really enjoying it. We are both enjoying the challenges of pair programming and learning from each other. I am looking forward to working on this project further.
+
+# Learning a New Data Technology
+This was something that was not in my schedule for the week, but I am glad that I got to fit it in. I wanted to play around with [dbt](https://www.getdbt.com/) for a while now. From their documentation, I forked this test [repo](https://github.com/5cotts/jaffle_shop) and have been playing around with it a little bit. I will continue exploring this technology in the future.
+
+# Experimenting With A Raspberry Pi VM
+One of my goals is to learn more about hardware. Since I don't have a Raspberry Pi, I thought it would be a good idea to play around with a Raspberry Pi VM before I purchase the hardware. This led me to [dockerpi](https://github.com/lukechilds/dockerpi).
+
+I was able to spawn the VM and access it's Raspian command line interface. I will need to play around it some more because I discovered it may be hard to prototype with the VM. For example, I want to try to run web apps from a Raspberry Pi, and it seems difficult to expose a port on an emulation running inside of a Docker container to the container and then expose that port from the container to my local machine. I assume this is a solved problem, just need to do some more tinkering to figure out the details.
+
+# Brushing Up On Some Algorithms
+Lastly, I began to revisit my algorithm studies. I decided to start working through <i>[Complete Intro to CS](https://btholt.github.io/complete-intro-to-computer-science/)</i>. 
+
+So far, I have learned about the below algorithms.
+<ul>
+    <li><a href="https://github.com/5cotts/algorithms-exercises/pull/1/commits/cc91ff353d442a9a99f2dbc3c42e33dc0139b593">Bubble Sort</a></li>
+    <li><a href="https://github.com/5cotts/algorithms-exercises/pull/1/commits/d4bc2a0e28cbe2a5073934b5420c496f7b77840e">Insertion Sort</a></li>
+    <li><a href="https://github.com/5cotts/algorithms-exercises/pull/1/commits/eda48a4b81e7c3ce25eab7855f6877ff813bba1f">Recursion via Nested Arrays</a></li>
+    <li><a href="https://github.com/5cotts/algorithms-exercises/pull/1/commits/3cd60d31d422f553cb3fbd04f3287a159b55849b">Recursion via Factorials</a></li>
+</ul>
+
+# Recap
+Overall, my first week was very social. I am looking forward to spending some more time coding in my second week and also refining what I want to do with my time at RC.
