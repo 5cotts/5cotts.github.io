@@ -3,7 +3,6 @@
     "title": "Software Engineer",
     "email": "s@scottschmidt.io",
     "website": "https://scottschmidt.io",
-    "about": "Engineer with three years of experience building products from the ground up. A team player, who is comfortable working independently and with others. Especially adept at facilitating conversation between engineering and product teams to help engineers understand business requirements and help product managers understand the work that goes into building and maintaining software.",
     "technicalCompetencies": [
         {
             "skill": "CI/CD",
@@ -66,7 +65,6 @@
             ]
         }
     ],
-    "personalProjects": [],
     "education": [
         {
             "eduName": "Economics & Business Administration",
