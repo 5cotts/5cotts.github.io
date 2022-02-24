@@ -41,26 +41,32 @@ $(document).ready(function() {
       },
       styles: {
         name: {
-          fontSize: 40,
+          fontSize: 30,
           bold: true
         },
         section_heading: {
-          fontSize: 20,
+          fontSize: 15,
           bold: true,
           alignment: 'center',
           margin: [0, 10, 0, 0]
         },
         company_name: {
-          fontSize: 15,
+          fontSize: 10,
           bold: true,
           margin: [0, 10, 0, 5]
         },
         project_heading: {
-          fontSize: 15,
+          fontSize: 10,
           bold: true
         },
+        work_title: {
+          fontSize: 10,
+        },
+        blurb: {
+          fontSize: 10,
+        },
         bullet_point: {
-          fontSize: 11,
+          fontSize: 10,
         },
         link: {
           color: 'blue',
@@ -111,7 +117,11 @@ $(document).ready(function() {
       if (!resumeContent || !resumeContent['name']) {
         return 0;
       }
-        content.push({ text: resumeContent['name'].toLowerCase(), style: 'name'});
+        content.push({ 
+          text: resumeContent['name'].toLowerCase(),
+          style: 'name',
+          alignment: 'left',
+        });
 
         content.push({
             stack: [
@@ -120,7 +130,8 @@ $(document).ready(function() {
                 { text: shortUrl(resumeContent['website']), link: resumeContent['website'], style: 'link' },
             ],
             alignment: 'right',
-            margin: [0, -45, 0, 0]
+            margin: [0, -45, 0, 0],
+            fontSize: 10,
         });
       
       return 1;
@@ -154,12 +165,13 @@ $(document).ready(function() {
             $.each(job['positions'], function(i, position) {
                 content.push({
                     text: [
-                        { text: position['title'], bold: true },
+                        { text: position['title'], bold: true},
                         ' ',
                         position['startDate'] + '-' + position['endDate']
-                    ]
+                    ],
+                    style: 'work_title',
                     });
-                    content.push({ text: position['blurb'], margin: [0, 5, 0, 0]});
+                    content.push({ text: position['blurb'], margin: [0, 5, 0, 0], style: 'blurb' });
 
                     var ulArray = [];
                     position['bulletPoints'].forEach(function(bulletPoint) {
@@ -221,7 +233,7 @@ $(document).ready(function() {
 
         $.each(technicalCompetencies, function(i, skillsData) {
             skillsTable[0].push([{ text: skillsData['skill'], style: 'project_heading'}]);
-            skillsTable[1].push([{ stack: skillsData['examples'] }]);
+            skillsTable[1].push([{ stack: skillsData['examples'], style: 'bullet_point' }]);
             widthsArray.push('*')
         });
 
@@ -267,7 +279,8 @@ $(document).ready(function() {
                     { text: edu['eduName'] },
                     { text: [{ text: status, bold: true }, date] }
                 ],
-                margin: [0, 15, 0, 0]
+                margin: [0, 15, 0, 0],
+                style: 'bullet_point',
             });
         });
 
