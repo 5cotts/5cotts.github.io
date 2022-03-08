@@ -9,4 +9,7 @@
 
 set -euo pipefail
 
+# Cleans up any local files in the `_site` directory.
+bundle exec jekyll clean
+# Generates new `_site` directory and serves.
 bundle exec jekyll serve
