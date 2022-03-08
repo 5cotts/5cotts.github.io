@@ -1,0 +1,74 @@
+---
+layout: post
+title:  "Week 2 at RC"
+date:   2022-03-06 16:25:00 -0500
+categories: post rc
+---
+{% include rc_blog_post_header.html %}
+
+# Rule of Three
+Taking a look at my time sheets for my third week at RC, I spent the majority of my time working in the following three areas.
+
+| Percentage Time Allocation | Subject Area                   |
+|----------------------------|--------------------------------|
+| 33.40                      | Hardware                       |
+| 17.77                      | Data Structures and Algorithms |
+| 17.25                      | Machine Learning               |
+
+Let's breakdown what I did over the course of the week in each of these areas.
+
+# Hardware
+This area took up the majority of the week, so much so that I wrote a separate blog post about the specifics [here]({% post_url hardware/canbus/2022-03-07-car-hack-1-of-n %}). I am proud of the deep dive I did into hardware here. I am learning a lot about the interaction between electrical and software engineering and also learning about how difficult it can be to debug code that has to run on a microchip instead of code that can run on a personal computer.
+
+My goal for this week is to debug a little bit more, but I have low expectations for this on-purpose. On Wednesday, I am travelling to California for a month and will need to leave all of my electrical components at home. I think this will be a nice break from hardware, and allow me to spend more of time focusing on things like data structures and algorithms. Additionally, if I do catch the hardware bug while I am in California, perhaps that will force me to create a emulated test environment on my laptop that may make debugging easier. The possibilities are endless!
+
+# Data Structures and Algorithms
+I continued working through <i>[Complete Intro to CS](https://btholt.github.io/complete-intro-to-computer-science/)</i>. 
+
+This week, I learned about the two data structures below.
+<ul>
+    <li><a href="https://github.com/5cotts/algorithms-exercises/pull/1/commits/720c239ee5804f85bae7323b9ed15123afdfa632">Array Lists</a></li>
+    <li><a href="https://github.com/5cotts/algorithms-exercises/pull/1/commits/2dcb5ad09dd2a0b14676c1b455f6c39de22fd240">Linked Lists</a></li>
+</ul>
+
+I struggled with these a little bit. I think this is partially for a couple of reasons:
+- I am still getting comfortable with creating data structures from scratch because I am accustomed to working with what data structures programming languages come pre-packaged with (specifically looking at you, [Python](https://www.geeksforgeeks.org/inbuilt-data-structures-python/)).
+- Also, <i>[Complete Intro to CS](https://btholt.github.io/complete-intro-to-computer-science/)</i> is written using JavaScript as the default language. I am not as well versed in JavaScript as I am in other languages, so sometimes I spend a chunk of time figuring out how to do relatively benign things ([How do I define a class in JavaScript?](https://thewebdev.info/2020/08/05/using-classes-in-javascript/)), rather than working on the task at-hand.
+
+Since one of my goals is to learn other programming languages, I think that it is a good thing that I am letting myself struggle a bit to learn the basics of new languages. However, I am starting to think that once I complete my read through of <i>[Complete Intro to CS](https://btholt.github.io/complete-intro-to-computer-science/)</i>, it might be worthwhile to translate my work into Python (my native tongue) to prove to myself that I understand the data structures and algorithms well and that nothing JavaScript wise was messing me up.
+
+# Machine Learning
+This ended up being my unexpected focus of the week. I pair programmed with another Recurser who needed assistance with a Flask application they were building. The Flask app hosted an endpoint that allowed users to upload an image to the server. An image classifier was then run on the photo upload and an algorithm attempted to predict what kind of fruit (if any) the image contained. They were using a dataset from [fast.ai](https://www.fast.ai/) to train the model on.
+
+Once we had the app running, we were saying that it would be really cool if somebody built a service that would expose the parameters of machine learning algorithms as endpoints that could be queried, since we surely were not the first people that slapped a Flask API endpoint on top of a ML function.
+
+Oddly enough, I happened to be scrolling thorough Hacker News later that day and came across this [post](https://news.ycombinator.com/item?id=30543228) about [slai](https://slai.io). It was as if somebody had listened in on our Zoom call and created a service just as we had wished! I had to try it out and created this [repo](https://github.com/5cotts/slai) where I ran their demo ML function that stylized a photo upload. This was as easy as...
+
+```python
+import json
+
+from PIL import Image
+import slai
+
+with open("config.json", 'r') as f:
+    CONFIG = json.loads(f.read())
+
+slai.login(
+    client_id=CONFIG['CLIENT_ID'],
+    client_secret=CONFIG['CLIENT_SECRET'],
+)
+
+MODEL = slai.model(CONFIG['MODEL_ENDPOINT'])
+INPUT_IMG = Image.open("image.jpeg")
+
+prediction = MODEL(input_image=INPUT_IMG)
+styled_image = prediction['styled_image']
+```
+And it worked! I received a response with the styled image. 
+
+Although I haven't worked much with ML, I have worked with back-end infrastructure. I think this tool can be very useful for ML engineers who want to focus their time on their ML algorithms, rather than spending cycles figuring out how to host/interact with their models.
+
+I see a lot of potential here. This definitely inspired me to learn some more about ML and what problems engineers in this space are facing.
+
+# Recap
+I learned a lot about some new technologies and am happy about the progress I am making. I am looking forward to taking a little break from hardware while I am travelling. While I am gone, I hope to deep dive further into data structures and algorithms by completing <i>[Complete Intro to CS](https://btholt.github.io/complete-intro-to-computer-science/)</i> and diving into my copy of <i>[Cracking The Coding Interview](https://en.wikipedia.org/wiki/Cracking_the_Coding_Interview)</i>.
