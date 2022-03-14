@@ -35,6 +35,9 @@ plugins:
 # https://desiredpersona.com/google-analytics-jekyll/
 google_analytics: G-94190WCYYY
 
+# Recurse Center
+rc_referral_url: https://www.recurse.com/scout/click?t=a51b6334f61df71aad62214a349fec3e
+
 data_dir: data
 
 # Exclude from processing.
