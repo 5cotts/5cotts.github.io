@@ -53,9 +53,9 @@
                     "title": "Software Engineer",
                     "startDate": "05/2019",
                     "endDate": "01/2020",
-                    "blurb": "This was a multi-faceted full stack position where I worked across both research and engineering functions to help build the product using an Agile method of development. With a small team, we built the alpha prototype which led to a seed investment by a venture capital firm.",
+                    "blurb": "This was a multi-faceted full stack position where I worked across both research and engineering functions to help build the product using an Agile method of development. With a small team, we built an alpha prototype which led to a seed investment by a venture capital firm.",
                     "bulletPoints": [
-                        "Built production web scrapers in Python using various tools such as Selenium, BeautifulSoup, and Requests to retrieve data from multiple sources. Scaled these scrapers to complete tens of thousands of tasks per day.",
+                        "Built web scrapers in Python using various tools such as Selenium, BeautifulSoup, and Requests to retrieve data from multiple sources. Scaled these scrapers to complete tens of thousands of tasks per day.",
                         "Wrote Python scripts to support an ETL pipeline that processed raw data for use with an end-user product. Consistently iterated to significantly decrease run time, utilizing tools like Python's Multiprocessing library to run parallel processes.",
                         "Wrote back-end Python code to integrate a front-end created by an information design firm with our Postgres database to create a prototype end-user product."
                     ]
