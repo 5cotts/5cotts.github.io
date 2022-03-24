@@ -33,6 +33,7 @@
         {
             "companyName": "WireScreen",
             "companyUrl": "https://wirescreen.ai/",
+            "companyBlurb": "WireScreen collects and analyzes data on millions of Chinese businesses. We turn data into intelligence by creating products which allow users to conduct due diligence, de-risk their supply chains, search for potential business partners, and more.",
             "positions": [
                 {
                     "title": "Engineering Team Lead",
@@ -41,11 +42,11 @@
                     "blurb": "Working directly under the CTO, I helped lead a small group of engineers. In addition to writing code, I also conducted code reviews, architected new services/features, and acted as liaison between engineering and product teams to help translate business needs into engineering outcomes.",
                     "bulletPoints": [
                         "Created and administered infrastructure on AWS. Used services such as DMS, EC2, ECR, ECS, ElastiCache, ElasticSearch, RDS, and S3.",
-                        "Wrote web scrapers in Python using various tools such as Selenium, BeautifulSoup, and Requests to retrieve data from multiple sources. Scaled these scrapers to complete thousands of tasks per day.",
-                        "Using Flask, uWSGI, and Jinja, built and managed multiple internal web apps for various tasks. These apps supported processes such as submitting and editing data on the end-user product or orchestrating what sources our scrapers should scrape and when.",
-                        "Built and managed micro-services for internal use by engineers. One such service translated Chinese strings into English using an in-house data store. Used Flask JSON-RPC to expose an API layer.",
-                        "Wrote Python scripts to support the ETL pipeline that prepared the raw scraped data for use with the end-user product. Consistently iterated on these scripts to significantly decrease run time, utilizing tools like Python's Multiprocessing library to run parallel processes.",
-                        "Added new features to the end-user product, such as front-end designs or API endpoints. The product was a Django web app with a Python back-end and React.js front-end."
+                        "Built CI/CD pipeline for engineers using GitHub Actions. Utilized Docker for containerization.",
+                        "Using Flask, uWSGI, and Jinja, built and managed multiple internal web apps. These apps supported tasks such as submitting/editing data for the end-user product or orchestrating our web scrapers.",
+                        "Built and managed micro-services for internal use by engineers. One such service translated Chinese strings into English using an in-house Postgres data store. Used Flask JSON-RPC to expose an API layer and Celery as a task queue.",
+                        "Added new features to the end-user product, such as front-end designs and API endpoints. The product was a Django web app with a Python back-end and React.js front-end.",
+                        "Worked with product teams to provide technical input on new features. Conducted exploratory data analysis using Jupyter to determine feasibility of features and provided reports to product teams."
                     ]
                 },
                 {
@@ -53,19 +54,34 @@
                     "startDate": "05/2019",
                     "endDate": "01/2020",
                     "blurb": "This was a multi-faceted full stack position where I worked across both research and engineering functions to help build the product using an Agile method of development. With a small team, we built the alpha prototype which led to a seed investment by a venture capital firm.",
-                    "bulletPoints": []
+                    "bulletPoints": [
+                        "Built production web scrapers in Python using various tools such as Selenium, BeautifulSoup, and Requests to retrieve data from multiple sources. Scaled these scrapers to complete tens of thousands of tasks per day.",
+                        "Wrote Python scripts to support an ETL pipeline that processed raw data for use with an end-user product. Consistently iterated to significantly decrease run time, utilizing tools like Python's Multiprocessing library to run parallel processes.",
+                        "Wrote back-end Python code to integrate a front-end created by an information design firm with our Postgres database to create a prototype end-user product."
+                    ]
                 },
                 {
                     "title": "Research Assistant",
                     "startDate": "02/2019",
                     "endDate": "05/2019",
                     "blurb": "Worked part-time while continuing to take college classes. Responsibilities included strategic planning and development of business/product processes using a combination of qualitative research and data analysis.",
-                    "bulletPoints": []
+                    "bulletPoints": [
+                        "Tested and prototyped different web scraping techniques in R and Python.",
+                        "Using the JavaScript libraries pdfmake and pdfkit, worked with a designer to refactor a front-end data download feature which generated PDFs on click using data from SQL queries."
+                    ]
                 }
             ]
         }
     ],
     "education": [
+        {
+            "eduName": "Pre-calculus, Calculus I & II, Statistical Modelling",
+            "eduLevel": "Non-degree",
+            "eduInstitution": "Harvard Extension School",
+            "eduUrl": "https://extension.harvard.edu/",
+            "startDate": "06/2018",
+            "endDate": "05/2019"
+        },
         {
             "eduName": "Economics & Business Administration",
             "eduLevel": "Bachelor's Degree",
