@@ -51,7 +51,7 @@ $(document).ready(function() {
           margin: [0, 10, 0, 0]
         },
         company_name: {
-          fontSize: 10,
+          fontSize: 12,
           bold: true,
           margin: [0, 10, 0, 5]
         },
@@ -71,6 +71,9 @@ $(document).ready(function() {
         link: {
           color: 'blue',
         },
+        positions_stack: {
+          margin: [15, 0, 15, 0],
+        }
       }
     };
 
@@ -84,7 +87,7 @@ $(document).ready(function() {
       if (items === undefined) {
         return {};
       }
-      return { ul: items, margin: [20, 0, 20, 0] };
+      return { ul: items, margin: [20, 5, 20, 5] };
     };
 
     var headerLine = function() {
@@ -154,33 +157,49 @@ $(document).ready(function() {
         content.push(sectionHeading('work experience'));
 
         $.each(workExperience, function(i, job) {
-            content.push({
-              text: [
-                { text: job['companyName'], style: 'company_name' },
-                { text: ' | ', bold: true }, 
-                { text: shortUrl(job['companyUrl']), link: job['companyUrl'], style: 'link'},
-              ]
-            })
+            content.push({ 
+              text: job['companyName'], 
+              link: job['companyUrl'], 
+              style: 'company_name',
+            });
 
+            if (job['companyBlurb']) {
+              content.push({ 
+                text: job['companyBlurb'],
+                style: 'blurb',
+                margin: [0, 0, 0, 5],
+              });
+            }
+
+            var positionsStack = [];
             $.each(job['positions'], function(i, position) {
-                content.push({
-                    text: [
-                        { text: position['title'], bold: true},
-                        ' ',
-                        position['startDate'] + '-' + position['endDate']
-                    ],
-                    style: 'work_title',
-                    });
-                    content.push({ text: position['blurb'], margin: [0, 5, 0, 0], style: 'blurb' });
+              let title = {
+                text: [
+                      { text: position['title'], bold: true},
+                      ' | ',
+                      position['startDate'] + '-' + position['endDate']
+                  ],
+                  style: 'work_title',
+              };
 
-                    var ulArray = [];
-                    position['bulletPoints'].forEach(function(bulletPoint) {
-                      ulArray.push({ text: bulletPoint, style: 'bullet_point'});
-                    });
-                    content.push(list(ulArray));
+              let blurb = { 
+                text: position['blurb'],
+                margin: [0, 5, 0, 2],
+                style: 'blurb' 
+              };
 
-                    content.push('\n');
-                });
+              let ulArray = [];
+              position['bulletPoints'].forEach(function(bulletPoint) {
+                ulArray.push({ text: bulletPoint, style: 'bullet_point'});
+              });
+              let bulletPoints = list(ulArray);
+
+              for (let part of [title, blurb, bulletPoints]) {
+                positionsStack.push(part);
+              }
+            });
+
+            content.push({ stack: positionsStack, style: 'positions_stack' });
         });
 
         return 1;
@@ -264,20 +283,23 @@ $(document).ready(function() {
         content.push(sectionHeading('education'));
 
         $.each(education, function(i, edu) {
-            if (edu['endDate']) {
-                var status = 'Graduated: ';
-                var date = edu['endDate'];
-            } else {
-                var status = 'Started: ';
-                var date = edu['startDate'];
-            }
-
+            let date = (
+              edu['endDate'] ? 
+                `${edu['startDate']}-${edu['endDate']}` : `${edu['startDate']}-present`
+            );
             content.push({
                 stack: [
-                    { text: edu['eduInstitution'], style: 'project_heading', link: edu['eduUrl'] },
-                    { text: edu['eduLevel'], italics: true },
-                    { text: edu['eduName'] },
-                    { text: [{ text: status, bold: true }, date] }
+                  {
+                    text: [
+                      { text: edu['eduInstitution'], style: 'project_heading', link: edu['eduUrl'] },
+                      ' | ',
+                      date,
+                    ],
+                    style: 'work_title', 
+                  },
+                  { text: edu['eduLevel'], italics: true },
+                  { text: edu['eduName'] },
+                  { text: edu['blurb'] ? edu['blurb'] : null}
                 ],
                 margin: [0, 15, 0, 0],
                 style: 'bullet_point',
@@ -295,7 +317,7 @@ $(document).ready(function() {
       [about, null],
       [workExperienceSection, dashedHeaderLine],
       [personProjectsSection, dashedHeaderLine],
-      [technicalCompetenciesSection, dashedHeaderLine],
+      // [technicalCompetenciesSection, dashedHeaderLine],
       [eduSection, headerLine],
     ];
 
