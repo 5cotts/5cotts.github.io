@@ -31,43 +31,53 @@
     ],
     "workExperience": [
         {
+            "companyName": "The Recurse Center",
+            "companyUrl": "https://www.recurse.com/",
+            "companyBlurb": "The Recurse Center is a full-time educational retreat for programmers who want to become dramatically better with a community of peers doing the same.",
+            "positions": [
+                {
+                    "title": "Participant",
+                    "startDate": "Feb. 2022",
+                    "endDate": "May 2022",
+                    "blurb": "",
+                    "bulletPoints": [
+                        "With an Arduino, created a device that plugs into a car to read the communication protocol messages between ECUs. Wrote C++ software to parse and log messages to serial output. Iterating on further software written with pySerial to download this data for analysis and then send messages back to a car, allowing for control of various ECUs.",
+                        "Expanded my knowledge of data structures and algorithms by pair programming on 150+ LeetCode problems with other participants. Analyzed and discussed the time/space complexity of our algorithms after each problem.",
+                        "Participated in fixing a time zone bug on the Recurse Center's presentations application. Used the opportunity to solve the bug in a group and discuss best practices for becoming familiar with a new codebase, reproducing the bug locally, testing a fix, opening a pull request, and leaving proper documentation for future maintainers."
+                    ]
+                }
+            ]
+
+        },
+        {
             "companyName": "WireScreen",
             "companyUrl": "https://wirescreen.ai/",
-            "companyBlurb": "WireScreen collects and analyzes data on millions of Chinese businesses. We turn data into intelligence by creating products which allow users to conduct due diligence, de-risk their supply chains, search for potential business partners, and more.",
+            "companyBlurb": "WireScreen collects and analyzes data on millions of Chinese businesses to create products which allow users to conduct due diligence, de-risk their supply chains, search for potential business partners, and more.",
             "positions": [
                 {
                     "title": "Engineering Team Lead",
-                    "startDate": "01/2020",
-                    "endDate": "12/2021",
+                    "startDate": "Jan. 2020",
+                    "endDate": "Dec. 2021",
                     "blurb": "Working directly under the CTO, I helped lead a small group of engineers. In addition to writing code, I also conducted code reviews, architected new services/features, and acted as liaison between engineering and product teams to help translate business needs into engineering outcomes.",
                     "bulletPoints": [
-                        "Created and administered infrastructure on AWS. Used services such as DMS, EC2, ECR, ECS, ElastiCache, ElasticSearch, RDS, and S3.",
-                        "Built CI/CD pipeline for engineers using GitHub Actions. Utilized Docker for containerization.",
-                        "Using Flask, uWSGI, and Jinja, built and managed multiple internal web apps. These apps supported tasks such as submitting/editing data for the end-user product or orchestrating our web scrapers.",
+                        "Created and administered infrastructure on AWS for data pipelines, web scrapers, and web apps. Used services such as DMS, EC2, ECR, ECS, ElastiCache, ElasticSearch, RDS, and S3.",
+                        "Built CI/CD pipeline for engineers using GitHub Actions, cutting deployment time from 20 to <10 minutes. Utilized Docker for containerization.",
+                        "Using Flask, uWSGI, and Jinja, built and managed internal web apps. These apps supported tasks such as submitting/editing data for the end-user product or orchestrating web scrapers, which saved the product team time by allowing them to contribute directly to the product.",
                         "Built and managed micro-services for internal use by engineers. One such service translated Chinese strings into English using an in-house Postgres data store. Used Flask JSON-RPC to expose an API layer and Celery as a task queue.",
-                        "Added new features to the end-user product, such as front-end designs and API endpoints. The product was a Django web app with a Python back-end and React.js front-end.",
-                        "Worked with product teams to provide technical input on new features. Conducted exploratory data analysis using Jupyter to determine feasibility of features and provided reports to product teams."
+                        "Added new front-end designs and API endpoints to the end-user product, a Django web app built with Python and React.js, which let users explore the connections between corporate entities and individuals.",
+                        "Worked with product teams to provide technical input on features proposed by users. Conducted exploratory data analysis using Jupyter to determine feasibility of features and provided reports."
                     ]
                 },
                 {
                     "title": "Software Engineer",
-                    "startDate": "05/2019",
-                    "endDate": "01/2020",
+                    "startDate": "Feb. 2019",
+                    "endDate": "Jan. 2020",
                     "blurb": "This was a multi-faceted full stack position where I worked across both research and engineering functions to help build the product using an Agile method of development. With a small team, we built an alpha prototype which led to a seed investment by a venture capital firm.",
                     "bulletPoints": [
-                        "Built web scrapers in Python using various tools such as Selenium, BeautifulSoup, and Requests to retrieve data from multiple sources. Scaled these scrapers to complete tens of thousands of tasks per day.",
-                        "Wrote Python scripts to support an ETL pipeline that processed raw data for use with an end-user product. Consistently iterated to significantly decrease run time, utilizing tools like Python's Multiprocessing library to run parallel processes.",
-                        "Wrote back-end Python code to integrate a front-end created by an information design firm with our Postgres database to create a prototype end-user product."
-                    ]
-                },
-                {
-                    "title": "Research Assistant",
-                    "startDate": "02/2019",
-                    "endDate": "05/2019",
-                    "blurb": "Worked part-time while continuing to take college classes. Responsibilities included strategic planning and development of business/product processes using a combination of qualitative research and data analysis.",
-                    "bulletPoints": [
-                        "Tested and prototyped different web scraping techniques in R and Python.",
-                        "Using the JavaScript libraries pdfmake and pdfkit, worked with a designer to refactor a front-end data download feature which generated PDFs on click using data from SQL queries."
+                        "Built web scrapers in Python using various tools such as Selenium, BeautifulSoup, and Requests to retrieve data from multiple sources. Scaled scrapers to complete XX thousand tasks per day.",
+                        "Wrote Python scripts to support an ETL pipeline that processed scraped data for use with an end-user product. Consistently iterated to significantly decrease run time and save on compute costs by utilizing tools like Python's Multiprocessing library to run parallel processes.",
+                        "Wrote back-end Python code to integrate a front-end created by an design firm with a Postgres database to create a prototype end-user product, which led to seed investment by a VC firm.",
+                        "Using the JavaScript library pdfmake, worked with a designer to refactor a front-end data download feature which generated PDFs on click using data from SQL queries."
                     ]
                 }
             ]
@@ -75,20 +85,12 @@
     ],
     "education": [
         {
-            "eduName": "Pre-calculus, Calculus I & II, Statistical Modelling",
-            "eduLevel": "Non-degree",
-            "eduInstitution": "Harvard Extension School",
-            "eduUrl": "https://extension.harvard.edu/",
-            "startDate": "06/2018",
-            "endDate": "05/2019"
-        },
-        {
             "eduName": "Economics & Business Administration",
             "eduLevel": "Bachelor's Degree",
             "eduInstitution": "Northeastern University",
             "eduUrl": "https://www.northeastern.edu/",
-            "startDate": "09/2013",
-            "endDate": "12/2018"
+            "startDate": "Sept. 2013",
+            "endDate": "Dec. 2018"
         }
     ]
 }
