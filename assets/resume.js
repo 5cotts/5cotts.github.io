@@ -154,7 +154,7 @@ $(document).ready(function() {
             return 0;
         };
 
-        content.push(sectionHeading('work experience'));
+        content.push(sectionHeading('experience'));
 
         $.each(workExperience, function(i, job) {
             content.push({ 
@@ -177,15 +177,9 @@ $(document).ready(function() {
                 text: [
                       { text: position['title'], bold: true},
                       ' | ',
-                      position['startDate'] + '-' + position['endDate']
+                      position['startDate'] + ' - ' + position['endDate']
                   ],
                   style: 'work_title',
-              };
-
-              let blurb = { 
-                text: position['blurb'],
-                margin: [0, 5, 0, 2],
-                style: 'blurb' 
               };
 
               let ulArray = [];
@@ -194,7 +188,7 @@ $(document).ready(function() {
               });
               let bulletPoints = list(ulArray);
 
-              for (let part of [title, blurb, bulletPoints]) {
+              for (let part of [title, bulletPoints]) {
                 positionsStack.push(part);
               }
             });
@@ -232,7 +226,7 @@ $(document).ready(function() {
             content.push({
               stack: [
                 { text: project['projectName'], style: 'project_heading' },
-                { text: project['blurb'], margin: [0, 5, 0, 0] },
+                { text: project['blurb'], margin: [0, 0, 0, 0] },
               ],
               margin: [0, 15, 0, 5]
             });
@@ -285,7 +279,7 @@ $(document).ready(function() {
         $.each(education, function(i, edu) {
             let date = (
               edu['endDate'] ? 
-                `${edu['startDate']}-${edu['endDate']}` : `${edu['startDate']}-present`
+                `${edu['startDate']} - ${edu['endDate']}` : `${edu['startDate']} - present`
             );
             content.push({
                 stack: [
