@@ -41,8 +41,8 @@
                     "endDate": "May 2022",
                     "blurb": "",
                     "bulletPoints": [
-                        "With an Arduino, created a device that plugs into a car to read the communication protocol messages between ECUs. Wrote C++ software to parse and log messages to serial output. Iterating on further software written with pySerial to download this data for analysis and then send messages back to a car, allowing for control of various ECUs.",
-                        "Expanded my knowledge of data structures and algorithms by pair programming on 150+ LeetCode problems with other participants. Analyzed and discussed the time/space complexity of our algorithms after each problem.",
+                        "With an Arduino, created a device that plugs into a car to read the communication protocol messages between ECUs. Reverse engineered various open source C++ libraries to parse and log messages to serial output. Iterating on further software written with pySerial to download this data for analysis and then send messages back to a car, allowing for control of ECUs.",
+                        "Expanded my knowledge of data structures and algorithms by pair programming on 160+ LeetCode problems with other participants. Analyzed and discussed the time/space complexity of our algorithms after each problem.",
                         "Participated in fixing a time zone bug on the Recurse Center's presentations application. Used the opportunity to solve the bug in a group and discuss best practices for becoming familiar with a new codebase, reproducing the bug locally, testing a fix, opening a pull request, and leaving proper documentation for future maintainers."
                     ]
                 }
