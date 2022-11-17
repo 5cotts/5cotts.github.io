@@ -184,6 +184,15 @@ $(document).ready(function() {
 
               let ulArray = [];
               position['bulletPoints'].forEach(function(bulletPoint) {
+                // Lazily checks if the given bulletPoint has an embedded JSON object inside of it.
+                // Parses and injects it into the doc definition if present.
+                // Can be used to provide in-line pdfmake styles (e.g., a hyperlink).
+                let embeddedJson = bulletPoint.match(/\{.+?\}/);
+                if (embeddedJson) {
+                  let start = bulletPoint.slice(0, embeddedJson.index);
+                  let end = bulletPoint.slice(embeddedJson.index + embeddedJson[0].length);
+                  bulletPoint = [start, JSON.parse(embeddedJson[0]), end];
+                }
                 ulArray.push({ text: bulletPoint, style: 'bullet_point'});
               });
               let bulletPoints = list(ulArray);

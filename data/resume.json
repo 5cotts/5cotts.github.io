@@ -76,7 +76,7 @@
                     "bulletPoints": [
                         "Built web scrapers in Python using various tools such as Selenium, BeautifulSoup, and Requests to retrieve data from multiple sources. Scaled scrapers to complete XX thousand tasks per day.",
                         "Wrote Python scripts to support an ETL pipeline that processed scraped data for use with an end-user product. Consistently iterated to significantly decrease run time and save on compute costs by utilizing tools like Python's Multiprocessing library to run parallel processes.",
-                        "Wrote back-end Python code to integrate a front-end created by an design firm with a Postgres database to create a prototype end-user product, which led to seed investment by a VC firm.",
+                        "Wrote back-end Python code to integrate a front-end created by an design firm with a Postgres database to create a prototype end-user product, which led to an investment by {\"text\": \"Sequoia Capital\", \"link\": \"https://www.sequoiacap.com/companies/the-wire-digital/\", \"style\": \"link\"}.",
                         "Using the JavaScript library pdfmake, worked with a designer to refactor a front-end data download feature which generated PDFs on click using data from SQL queries."
                     ]
                 }
