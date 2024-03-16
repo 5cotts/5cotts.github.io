@@ -31,6 +31,25 @@
     ],
     "workExperience": [
         {
+            "companyName": "Sparrow",
+            "companyUrl": "https://trysparrow.com/",
+            "companyBlurb": "",
+            "positions": [
+                {
+                    "title": "Software Engineer",
+                    "startDate": "Aug. 2022",
+                    "endDate": "",
+                    "blurb": "",
+                    "bulletPoints": [
+                        "Payroll",
+                        "Creating epics",
+                        "Other stuff"
+                    ]
+                }
+            ],
+            "deprecated": false
+        },
+        {
             "companyName": "The Recurse Center",
             "companyUrl": "https://www.recurse.com/",
             "companyBlurb": "The Recurse Center is a full-time educational retreat for programmers who want to become dramatically better with a community of peers doing the same.",
@@ -46,8 +65,8 @@
                         "Participated in fixing a time zone bug on the Recurse Center's presentations application. Used the opportunity to solve the bug in a group and discuss best practices for becoming familiar with a new codebase, reproducing the bug locally, testing a fix, opening a pull request, and leaving proper documentation for future maintainers."
                     ]
                 }
-            ]
-
+            ],
+            "deprecated": true
         },
         {
             "companyName": "WireScreen",
@@ -80,7 +99,8 @@
                         "Using the JavaScript library pdfmake, worked with a designer to refactor a front-end data download feature which generated PDFs on click using data from SQL queries."
                     ]
                 }
-            ]
+            ],
+            "deprecated": false
         }
     ],
     "education": [
