@@ -72,7 +72,7 @@ $(document).ready(function() {
           color: 'blue',
         },
         positions_stack: {
-          margin: [15, 0, 15, 0],
+          margin: [0, 0, 0, 0],
         }
       }
     };
@@ -87,7 +87,7 @@ $(document).ready(function() {
       if (items === undefined) {
         return {};
       }
-      return { ul: items, margin: [20, 5, 20, 5] };
+      return { ul: items, margin: [5, 5, 5, 5] };
     };
 
     var headerLine = function() {
