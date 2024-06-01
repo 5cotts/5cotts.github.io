@@ -10,7 +10,7 @@
         },
         {
             "skill": "Cloud",
-            "examples": ["AWS"]
+            "examples": ["AWS", "Heroku"]
         },
         {
             "skill": "Containers",
@@ -33,18 +33,31 @@
         {
             "companyName": "Sparrow",
             "companyUrl": "https://trysparrow.com/",
-            "companyBlurb": "",
+            "companyBlurb": "Sparrow is the first end-to-end leave management solution for employers. We automate the most painful parts of leave management, saving HR teams 20+ hours of time and up to $30k of cost savings for each leave.",
             "positions": [
                 {
-                    "title": "Software Engineer",
-                    "startDate": "Aug. 2022",
+                    "title": "Senior Software Engineer",
+                    "startDate": "April 2024",
                     "endDate": "",
                     "blurb": "",
                     "bulletPoints": [
-                        "Payroll",
-                        "Creating epics",
-                        "Other stuff"
+                        "Spearheading the engineering effort on Sparrow's custom payroll calculator which has saved customers over {\"text\": \"$100M in payroll costs\", \"link\": \"https://trysparrow.com/blog/sparrow-saved-customers-100-million-in-payroll-costs/\", \"style\": \"link\"} and Sparrow's payroll analyst team hundreds of hours of manual work.",
+                        "Onboard engineers to Sparrow's Python payroll library, write documentation, collaborate with stakeholders, respond to QA, and plan new features.",
+                        "Successfully led multiple payroll initiatives under tight deadlines, meeting VIP customer (ARR >$X00k) needs and receiving positive feedback from both internal and external stakeholders.",
+                        "Cultivate a collaborative and inclusive remote team culture through mentorship, pair programming, and celebrating successes openly."
                     ]
+                },
+                {
+                    "title": "Software Engineer",
+                    "startDate": "Sept. 2022",
+                    "endDate": "April 2024",
+                    "blurb": "",
+                    "bulletPoints": [
+                        "Owned the payroll V2 initiative from initial concept to successful beta with >10 customers, paving the way for its general availability release which is poised to serve >100 customers.",
+                        "Directed overhaul of payroll React.js UI and Django models, enabling custom report generation and scheduled email delivery via Heroku infrastructure. Generated over 300 payroll reports as of June 2024.",
+                        "Led redesign of the private disability insurance React.js UI and Django models, boosting data submissions by 30% and increasing insurance-linked employee leaves from 0% to 98%, enabling improved service delivery by Sparrow's leave specialists.",
+                        "Enhanced Sparrow's Python payroll library, increasing user efficiency and customer support with new benefit sources, historical benefit support, and multiple salary proration methods."
+                    ]                 
                 }
             ],
             "deprecated": false
@@ -79,12 +92,10 @@
                     "endDate": "Dec. 2021",
                     "blurb": "Working directly under the CTO, I helped lead a small group of engineers. In addition to writing code, I also conducted code reviews, architected new services/features, and acted as liaison between engineering and product teams to help translate business needs into engineering outcomes.",
                     "bulletPoints": [
-                        "Created and administered infrastructure on AWS for data pipelines, web scrapers, and web apps. Used services such as DMS, EC2, ECR, ECS, ElastiCache, ElasticSearch, RDS, and S3.",
-                        "Built CI/CD pipeline for engineers using GitHub Actions, cutting deployment time from 20 to <10 minutes. Utilized Docker for containerization.",
-                        "Using Flask, uWSGI, and Jinja, built and managed internal web apps. These apps supported tasks such as submitting/editing data for the end-user product or orchestrating web scrapers, which saved the product team time by allowing them to contribute directly to the product.",
-                        "Built and managed micro-services for internal use by engineers. One such service translated Chinese strings into English using an in-house Postgres data store. Used Flask JSON-RPC to expose an API layer and Celery as a task queue.",
-                        "Added new front-end designs and API endpoints to the end-user product, a Django web app built with Python and React.js, which let users explore the connections between corporate entities and individuals.",
-                        "Worked with product teams to provide technical input on features proposed by users. Conducted exploratory data analysis using Jupyter to determine feasibility of features and provided reports."
+                        "Collaborated with product teams to evaluate new features. Conducted exploratory data analysis in Jupyter to assess feasibility and provided reports.",
+                        "Created and administered AWS infrastructure for data pipelines, web scrapers, and web apps using DMS, EC2, ECR, ECS, ElastiCache, Elasticsearch, RDS, and S3.",
+                        "Constructed CI/CD pipeline using GitHub Actions, cutting deployment time from 20 to <10 minutes. Utilized Docker for containerization.",
+                        "Developed internal web apps with Flask, uWSGI, and Jinja. These apps facilitated data submission/editing and coordinated web scrapers, boosting development velocity by enabling direct product contribution without engineering intermediation."
                     ]
                 },
                 {
@@ -93,10 +104,9 @@
                     "endDate": "Jan. 2020",
                     "blurb": "This was a multi-faceted full stack position where I worked across both research and engineering functions to help build the product using an Agile method of development. With a small team, we built an alpha prototype which led to a seed investment by a venture capital firm.",
                     "bulletPoints": [
-                        "Built web scrapers in Python using various tools such as Selenium, BeautifulSoup, and Requests to retrieve data from multiple sources. Scaled scrapers to complete XX thousand tasks per day.",
-                        "Wrote Python scripts to support an ETL pipeline that processed scraped data for use with an end-user product. Consistently iterated to significantly decrease run time and save on compute costs by utilizing tools like Python's Multiprocessing library to run parallel processes.",
-                        "Wrote back-end Python code to integrate a front-end created by an design firm with a Postgres database to create a prototype end-user product, which led to an investment by {\"text\": \"Sequoia Capital\", \"link\": \"https://www.sequoiacap.com/companies/the-wire-digital/\", \"style\": \"link\"}.",
-                        "Using the JavaScript library pdfmake, worked with a designer to refactor a front-end data download feature which generated PDFs on click using data from SQL queries."
+                        "Built and scaled Python web scrapers using Selenium, BeautifulSoup, and Requests to retrieve data from multiple sources, completing XX thousand tasks per day.",
+                        "Wrote Python scripts for an ETL pipeline processing scraped data, reducing runtime and compute costs by using Python's Multiprocessing library for parallel processing.",
+                        "Wrote back-end Python code to integrate a front-end created by an design firm with a Postgres database to create a prototype end-user product, which led to an investment by {\"text\": \"Sequoia Capital\", \"link\": \"https://www.sequoiacap.com/companies/the-wire-digital/\", \"style\": \"link\"}."
                     ]
                 }
             ],
