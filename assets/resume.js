@@ -72,7 +72,7 @@ $(document).ready(function() {
           color: 'blue',
         },
         positions_stack: {
-          margin: [15, 0, 15, 0],
+          margin: [0, 0, 0, 0],
         }
       }
     };
@@ -87,7 +87,7 @@ $(document).ready(function() {
       if (items === undefined) {
         return {};
       }
-      return { ul: items, margin: [20, 5, 20, 5] };
+      return { ul: items, margin: [5, 5, 5, 5] };
     };
 
     var headerLine = function() {
@@ -114,6 +114,13 @@ $(document).ready(function() {
     var shortUrl = function(rawUrl) {
         let url = new URL(rawUrl);
         return url.hostname;
+    }
+
+    var dateIntervalStr = function(startDate, endDate) {
+      return (
+        endDate ? 
+          `${startDate} - ${endDate}` : `${startDate} - present`
+      );
     }
 
     var header = function() {
@@ -157,6 +164,12 @@ $(document).ready(function() {
         content.push(sectionHeading('experience'));
 
         $.each(workExperience, function(i, job) {
+            // If the job has been deprecated,
+            // don't include in the generated resume.
+            if (job['deprecated']) { 
+              return;
+            }
+
             content.push({ 
               text: job['companyName'], 
               link: job['companyUrl'], 
@@ -177,7 +190,7 @@ $(document).ready(function() {
                 text: [
                       { text: position['title'], bold: true},
                       ' | ',
-                      position['startDate'] + ' - ' + position['endDate']
+                      dateIntervalStr(position['startDate'], position['endDate'])
                   ],
                   style: 'work_title',
               };
@@ -286,17 +299,13 @@ $(document).ready(function() {
         content.push(sectionHeading('education'));
 
         $.each(education, function(i, edu) {
-            let date = (
-              edu['endDate'] ? 
-                `${edu['startDate']} - ${edu['endDate']}` : `${edu['startDate']} - present`
-            );
             content.push({
                 stack: [
                   {
                     text: [
                       { text: edu['eduInstitution'], style: 'project_heading', link: edu['eduUrl'] },
                       ' | ',
-                      date,
+                      dateIntervalStr(edu['startDate'], edu['endDate']),
                     ],
                     style: 'work_title', 
                   },
