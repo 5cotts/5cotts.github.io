@@ -42,9 +42,9 @@
                     "blurb": "",
                     "bulletPoints": [
                         "Spearheading the engineering effort on Sparrow's custom payroll calculator which has saved customers over {\"text\": \"$100M in payroll costs\", \"link\": \"https://trysparrow.com/blog/sparrow-saved-customers-100-million-in-payroll-costs/\", \"style\": \"link\"} and Sparrow's payroll analyst team hundreds of hours of manual work.",
-                        "Onboard engineers to Sparrow's Python payroll library, write documentation, collaborate with stakeholders, respond to QA, and plan new features.",
-                        "Successfully led multiple payroll initiatives under tight deadlines, meeting VIP customer (ARR >$X00k) needs and receiving positive feedback from both internal and external stakeholders.",
-                        "Cultivate a collaborative and inclusive remote team culture through mentorship, pair programming, and celebrating successes openly."
+                        "Onboarding engineers to Sparrow's Python payroll library, writing documentation, collaborating with stakeholders, responding to QA, and planning new features.",
+                        "Successfully leading multiple payroll initiatives under tight deadlines, meeting VIP customer (ARR >$X00k) needs, and receiving positive feedback from both internal and external stakeholders.",
+                        "Cultivating a collaborative and inclusive remote team culture through mentorship, pair programming, and celebrating success openly."
                     ]
                 },
                 {
@@ -54,7 +54,7 @@
                     "blurb": "",
                     "bulletPoints": [
                         "Owned the payroll V2 initiative from initial concept to successful beta with >10 customers, paving the way for its general availability release which is poised to serve >100 customers.",
-                        "Directed overhaul of payroll React.js UI and Django models, enabling custom report generation and scheduled email delivery via Heroku infrastructure. Generated over 300 payroll reports as of June 2024.",
+                        "Directed overhaul of payroll React.js UI and Django models, enabling custom report generation and scheduled email delivery via Heroku infrastructure. Generated >300 payroll reports as of June 2024.",
                         "Led redesign of the private disability insurance React.js UI and Django models, boosting data submissions by 30% and increasing insurance-linked employee leaves from 0% to 98%, enabling improved service delivery by Sparrow's leave specialists.",
                         "Enhanced Sparrow's Python payroll library, increasing user efficiency and customer support with new benefit sources, historical benefit support, and multiple salary proration methods."
                     ]                 
