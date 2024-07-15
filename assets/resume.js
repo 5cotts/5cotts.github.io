@@ -128,19 +128,21 @@ $(document).ready(function() {
         return 0;
       }
         content.push({ 
-          text: resumeContent['name'].toLowerCase(),
+          text: resumeContent['name'],
           style: 'name',
           alignment: 'left',
         });
 
         content.push({
             stack: [
-                { text: resumeContent['title'].toLowerCase(), italics: true },
+                // TODO(Scott): You thought it was redundant to have this small title say software engineer at the top of your resume.
+                // Leaving as a comment so that you remember what it used to look like in-case you ever want to revisit it.
+                // { text: resumeContent['title'].toLowerCase(), italics: true },
                 { text: resumeContent['email'] },
                 { text: shortUrl(resumeContent['website']), link: resumeContent['website'], style: 'link' },
             ],
             alignment: 'right',
-            margin: [0, -45, 0, 0],
+            margin: [0, -30, 0, 0],
             fontSize: 10,
         });
       
@@ -161,7 +163,7 @@ $(document).ready(function() {
             return 0;
         };
 
-        content.push(sectionHeading('experience'));
+        content.push(sectionHeading('Experience'));
 
         $.each(workExperience, function(i, job) {
             // If the job has been deprecated,
@@ -226,7 +228,7 @@ $(document).ready(function() {
           return 0;
         };
 
-        var personalProjectsHeading = sectionHeading('personal projects');
+        var personalProjectsHeading = sectionHeading('Personal Projects');
         content.push(personalProjectsHeading);
 
         $.each(personalProjects, function(i, project) {
@@ -275,7 +277,7 @@ $(document).ready(function() {
         // TODO(Scott): Should all sections be stacks?
         content.push({
           stack: [
-            sectionHeading('technical competencies'),
+            sectionHeading('Technical Competencies'),
             {
               table: {
                   widths: widthsArray,
@@ -296,7 +298,7 @@ $(document).ready(function() {
             return 0;
         };
 
-        content.push(sectionHeading('education'));
+        content.push(sectionHeading('Education'));
 
         $.each(education, function(i, edu) {
             content.push({
