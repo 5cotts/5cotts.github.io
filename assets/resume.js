@@ -12,6 +12,7 @@ $(document).ready(function() {
     var workExperience = resumeContent['workExperience'];
     var personalProjects = resumeContent['personalProjects'];
     var education = resumeContent['education'];
+    var otherEducation = resumeContent['otherEducation'];
 
     var shortDate = function(dateObj, separator) {
       // Month is zero indexed.
@@ -116,11 +117,16 @@ $(document).ready(function() {
         return url.hostname;
     }
 
-    var dateIntervalStr = function(startDate, endDate) {
-      return (
-        endDate ? 
-          `${startDate} - ${endDate}` : `${startDate} - present`
-      );
+    var dateIntervalStr = function(startDate, endDate, includePresent = true) {
+      if (endDate) {
+        return `${startDate} - ${endDate}`;
+      }
+
+      if (includePresent) {
+        return `${startDate} - present`;
+      }
+
+      return `${startDate}`;
     }
 
     var header = function() {
@@ -298,7 +304,7 @@ $(document).ready(function() {
             return 0;
         };
 
-        content.push(sectionHeading('Education'));
+        content.push(sectionHeading('Diplomaed Education'));
 
         $.each(education, function(i, edu) {
             content.push({
@@ -323,6 +329,36 @@ $(document).ready(function() {
         return 1;
     }
 
+    var otherEduSection = function() {
+      if (!otherEducation || !otherEducation.length) {
+          return 0;
+      };
+
+      content.push(sectionHeading('Other Education'));
+
+      $.each(otherEducation, function(i, edu) {
+          content.push({
+              stack: [
+                {
+                  text: [
+                    { text: edu['eduInstitution'], style: 'project_heading', link: edu['eduUrl'] },
+                    ' | ',
+                    dateIntervalStr(edu['startDate'], edu['endDate'], Boolean(edu['endDate'])),
+                  ],
+                  style: 'work_title', 
+                },
+                { text: edu['eduLevel'], italics: true },
+                { text: edu['eduName'] },
+                { text: edu['blurb'] ? edu['blurb'] : null}
+              ],
+              margin: [0, 15, 0, 0],
+              style: 'bullet_point',
+          });
+      });
+
+      return 1;
+  }
+
     // TODO(Scott): Each of these functions below could take content as an argument,
     // and the respective section's data.
     // Add more sections to the below if necessary.
@@ -332,7 +368,8 @@ $(document).ready(function() {
       [workExperienceSection, dashedHeaderLine],
       [personProjectsSection, dashedHeaderLine],
       // [technicalCompetenciesSection, dashedHeaderLine],
-      [eduSection, headerLine],
+      [eduSection, dashedHeaderLine],
+      [otherEduSection, headerLine],
     ];
 
     orderedSectionSeparatorPairs.forEach(function (pair) {

@@ -122,5 +122,63 @@
             "startDate": "Sept. 2013",
             "endDate": "Dec. 2018"
         }
+    ],
+    "otherEducation": [
+        {
+            "eduName": "Introduction to Neo4j",
+            "eduInstitution": "Neo4j",
+            "startDate": "Jul. 2019",
+            "eduUrl": "https://www.dropbox.com/s/knbmfkjhdwmsax5/Neo4j%20-%20Intro%20to%20Neo4j%20Certificate.pdf?dl=0"
+        },
+        {
+            "eduName": "Neo4j Administration",
+            "eduInstitution": "Neo4j",
+            "startDate": "Jul. 2019",
+            "eduUrl": "https://www.dropbox.com/s/0g9r11066ft7na3/Neo4j%20-%20Neo4j%20Administration.pdf?dl=0"
+        },
+        {
+            "eduName": "Pre-calculus, Calculus I/II, and Statistical Modeling",
+            "eduInstitution": "Harvard Extension School",
+            "startDate": "June 2018",
+            "endDate": "May 2019",
+            "eduUrl": "https://extension.harvard.edu/"
+        },
+        {
+            "eduName": "Introduction to Functions in Python",
+            "eduInstitution": "DataCamp",
+            "startDate": "Mar. 2019",
+            "eduUrl": "https://www.datacamp.com/statement-of-accomplishment/course/2268d5220be8b5d8c3ed42a9c39136f9aae34612"
+        },
+        {
+            "eduName": "Intermediate Python",
+            "eduInstitution": "DataCamp",
+            "startDate": "Feb. 2019",
+            "eduUrl": "https://www.datacamp.com/statement-of-accomplishment/course/494e9a5cc43765808b8586fadf14f1a4f9e00f42"
+        },
+        {
+            "eduName": "Intermediate SQL Queries",
+            "eduInstitution": "DataCamp",
+            "startDate": "Feb. 2019",
+            "eduUrl": "https://www.datacamp.com/statement-of-accomplishment/course/cfe570ca4b5e87d9677ea89357e68d9a8fd437f3"
+        },
+        {
+            "eduName": "Introduction to Python",
+            "eduInstitution": "DataCamp",
+            "startDate": "Feb. 2019",
+            "eduUrl": "https://www.datacamp.com/statement-of-accomplishment/course/c2d57f4d2145cbb950405789b6db0702e6be4bd2"
+        },
+        {
+            "eduName": "The Data Scientist's Toolbox",
+            "eduInstitution": "Johns Hopkins University on Coursera",
+            "startDate": "Jan. 2018",
+            "eduUrl": "https://coursera.org/share/9b2fda0e2b5084edb39b5ddd526eafe2"
+        },
+        {
+            "eduName": "Finance, Political Economy, and Economics",
+            "eduInstitution": "The London School of Economics and Political Science - Summer School",
+            "startDate": "Summer 2016",
+            "endDate": "Summer 2017",
+            "eduUrl": "https://www.lse.ac.uk/"
+        }
     ]
 }
