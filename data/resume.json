@@ -79,7 +79,7 @@
                     ]
                 }
             ],
-            "deprecated": true
+            "deprecated": false
         },
         {
             "companyName": "WireScreen",
