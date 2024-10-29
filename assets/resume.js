@@ -218,9 +218,10 @@ $(document).ready(function() {
               });
               let bulletPoints = list(ulArray);
 
-              for (let part of [title, bulletPoints]) {
-                positionsStack.push(part);
-              }
+              positionsStack.push({
+                stack: [title, bulletPoints],
+                unbreakable: true,
+              });
             });
 
             content.push({ stack: positionsStack, style: 'positions_stack' });
