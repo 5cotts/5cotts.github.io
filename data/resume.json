@@ -115,6 +115,14 @@
     ],
     "education": [
         {
+            "eduName": "Computer and Information Technology",
+            "eduLevel": "Master's Degree",
+            "eduInstitution": "University of Pennsylvania",
+            "eduUrl": "https://www.upenn.edu/",
+            "startDate": "Jan. 2025",
+            "endDate": null
+        },
+        {
             "eduName": "Economics & Business Administration",
             "eduLevel": "Bachelor's Degree",
             "eduInstitution": "Northeastern University",
