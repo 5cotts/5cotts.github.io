@@ -337,7 +337,7 @@ $(document).ready(function() {
             return 0;
         }
 
-        content.push(sectionHeading('Diplomaed Education'));
+        content.push(sectionHeading('Education'));
 
         $.each(activeEducation, function(i, edu) {
             content.push({
