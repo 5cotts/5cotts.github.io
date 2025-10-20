@@ -6,27 +6,33 @@
     "technicalCompetencies": [
         {
             "skill": "CI/CD",
-            "examples": ["CircleCI", "GitHub Actions"]
+            "examples": ["CircleCI", "GitHub Actions"],
+            "includeInPdf": false
         },
         {
             "skill": "Cloud",
-            "examples": ["AWS", "Heroku"]
+            "examples": ["AWS", "Heroku"],
+            "includeInPdf": false
         },
         {
             "skill": "Containers",
-            "examples": ["Docker"]
+            "examples": ["Docker"],
+            "includeInPdf": false
         },
         {
             "skill": "Data Stores",
-            "examples": ["CSV", "ElasticSearch", "JSON", "Parquet", "PostgreSQL", "Redis"]
+            "examples": ["CSV", "ElasticSearch", "JSON", "Parquet", "PostgreSQL", "Redis"],
+            "includeInPdf": false
         },
         {
             "skill": "Frameworks",
-            "examples": ["Django", "Flask", "Jekyll", "React"]
+            "examples": ["Django", "Flask", "Jekyll", "React"],
+            "includeInPdf": false
         },
         {
             "skill": "Languages",
-            "examples": ["Bash", "CSS", "HTML", "JavaScript", "Python", "R", "SQL"]
+            "examples": ["Bash", "CSS", "HTML", "JavaScript", "Python", "R", "SQL"],
+            "includeInPdf": false
         }
     ],
     "workExperience": [
@@ -60,7 +66,7 @@
                     ]                 
                 }
             ],
-            "deprecated": false
+            "includeInPdf": true
         },
         {
             "companyName": "The Recurse Center",
@@ -79,7 +85,7 @@
                     ]
                 }
             ],
-            "deprecated": false
+            "includeInPdf": false
         },
         {
             "companyName": "WireScreen",
@@ -110,7 +116,7 @@
                     ]
                 }
             ],
-            "deprecated": false
+            "includeInPdf": true
         }
     ],
     "education": [
@@ -120,7 +126,8 @@
             "eduInstitution": "University of Pennsylvania",
             "eduUrl": "https://www.upenn.edu/",
             "startDate": "Jan. 2025",
-            "endDate": null
+            "endDate": null,
+            "includeInPdf": true
         },
         {
             "eduName": "Economics & Business Administration",
@@ -128,7 +135,8 @@
             "eduInstitution": "Northeastern University",
             "eduUrl": "https://www.northeastern.edu/",
             "startDate": "Sept. 2013",
-            "endDate": "Dec. 2018"
+            "endDate": "Dec. 2018",
+            "includeInPdf": true
         }
     ],
     "otherEducation": [
@@ -136,57 +144,66 @@
             "eduName": "Introduction to Neo4j",
             "eduInstitution": "Neo4j",
             "startDate": "Jul. 2019",
-            "eduUrl": "https://www.dropbox.com/s/knbmfkjhdwmsax5/Neo4j%20-%20Intro%20to%20Neo4j%20Certificate.pdf?dl=0"
+            "eduUrl": "https://www.dropbox.com/s/knbmfkjhdwmsax5/Neo4j%20-%20Intro%20to%20Neo4j%20Certificate.pdf?dl=0",
+            "includeInPdf": false
         },
         {
             "eduName": "Neo4j Administration",
             "eduInstitution": "Neo4j",
             "startDate": "Jul. 2019",
-            "eduUrl": "https://www.dropbox.com/s/0g9r11066ft7na3/Neo4j%20-%20Neo4j%20Administration.pdf?dl=0"
+            "eduUrl": "https://www.dropbox.com/s/0g9r11066ft7na3/Neo4j%20-%20Neo4j%20Administration.pdf?dl=0",
+            "includeInPdf": false
         },
         {
             "eduName": "Pre-calculus, Calculus I/II, and Statistical Modeling",
             "eduInstitution": "Harvard Extension School",
             "startDate": "June 2018",
             "endDate": "May 2019",
-            "eduUrl": "https://extension.harvard.edu/"
+            "eduUrl": "https://extension.harvard.edu/",
+            "includeInPdf": false
         },
         {
             "eduName": "Introduction to Functions in Python",
             "eduInstitution": "DataCamp",
             "startDate": "Mar. 2019",
-            "eduUrl": "https://www.datacamp.com/statement-of-accomplishment/course/2268d5220be8b5d8c3ed42a9c39136f9aae34612"
+            "eduUrl": "https://www.datacamp.com/statement-of-accomplishment/course/2268d5220be8b5d8c3ed42a9c39136f9aae34612",
+            "includeInPdf": false
         },
         {
             "eduName": "Intermediate Python",
             "eduInstitution": "DataCamp",
             "startDate": "Feb. 2019",
-            "eduUrl": "https://www.datacamp.com/statement-of-accomplishment/course/494e9a5cc43765808b8586fadf14f1a4f9e00f42"
+            "eduUrl": "https://www.datacamp.com/statement-of-accomplishment/course/494e9a5cc43765808b8586fadf14f1a4f9e00f42",
+            "includeInPdf": false
         },
         {
             "eduName": "Intermediate SQL Queries",
             "eduInstitution": "DataCamp",
             "startDate": "Feb. 2019",
-            "eduUrl": "https://www.datacamp.com/statement-of-accomplishment/course/cfe570ca4b5e87d9677ea89357e68d9a8fd437f3"
+            "eduUrl": "https://www.datacamp.com/statement-of-accomplishment/course/cfe570ca4b5e87d9677ea89357e68d9a8fd437f3",
+            "includeInPdf": false
         },
         {
             "eduName": "Introduction to Python",
             "eduInstitution": "DataCamp",
             "startDate": "Feb. 2019",
-            "eduUrl": "https://www.datacamp.com/statement-of-accomplishment/course/c2d57f4d2145cbb950405789b6db0702e6be4bd2"
+            "eduUrl": "https://www.datacamp.com/statement-of-accomplishment/course/c2d57f4d2145cbb950405789b6db0702e6be4bd2",
+            "includeInPdf": false
         },
         {
             "eduName": "The Data Scientist's Toolbox",
             "eduInstitution": "Johns Hopkins University on Coursera",
             "startDate": "Jan. 2018",
-            "eduUrl": "https://coursera.org/share/9b2fda0e2b5084edb39b5ddd526eafe2"
+            "eduUrl": "https://coursera.org/share/9b2fda0e2b5084edb39b5ddd526eafe2",
+            "includeInPdf": false
         },
         {
             "eduName": "Finance, Political Economy, and Economics",
             "eduInstitution": "The London School of Economics and Political Science - Summer School",
             "startDate": "Summer 2016",
             "endDate": "Summer 2017",
-            "eduUrl": "https://www.lse.ac.uk/"
+            "eduUrl": "https://www.lse.ac.uk/",
+            "includeInPdf": false
         }
     ]
 }

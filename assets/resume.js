@@ -169,14 +169,18 @@ $(document).ready(function() {
             return 0;
         };
 
+        // Filter work experience items to include only those marked for PDF
+        var activeWorkExperience = workExperience.filter(function(job) {
+            return job['includeInPdf'] !== false;
+        });
+
+        if (!activeWorkExperience.length) {
+            return 0;
+        }
+
         content.push(sectionHeading('Experience'));
 
-        $.each(workExperience, function(i, job) {
-            // If the job has been deprecated,
-            // don't include in the generated resume.
-            if (job['deprecated']) { 
-              return;
-            }
+        $.each(activeWorkExperience, function(i, job) {
 
             content.push({ 
               text: job['companyName'], 
@@ -235,10 +239,19 @@ $(document).ready(function() {
           return 0;
         };
 
+        // Filter projects to include only those marked for PDF
+        var activeProjects = personalProjects.filter(function(project) {
+            return project['includeInPdf'] !== false;
+        });
+
+        if (!activeProjects.length) {
+            return 0;
+        }
+
         var personalProjectsHeading = sectionHeading('Personal Projects');
         content.push(personalProjectsHeading);
 
-        $.each(personalProjects, function(i, project) {
+        $.each(activeProjects, function(i, project) {
           if (project['projectUrl']) {
             content.push({
               stack: [
@@ -271,11 +284,20 @@ $(document).ready(function() {
         if (!technicalCompetencies || !technicalCompetencies.length) {
             return 0;
         };
+
+        // Filter technical competencies to include only those marked for PDF
+        var activeCompetencies = technicalCompetencies.filter(function(skill) {
+            return skill['includeInPdf'] !== false;
+        });
+
+        if (!activeCompetencies.length) {
+            return 0;
+        }
         
         var skillsTable = [[],[]];
         var widthsArray = [];
 
-        $.each(technicalCompetencies, function(i, skillsData) {
+        $.each(activeCompetencies, function(i, skillsData) {
             skillsTable[0].push([{ text: skillsData['skill'], style: 'project_heading'}]);
             skillsTable[1].push([{ stack: skillsData['examples'], style: 'bullet_point' }]);
             widthsArray.push('*')
@@ -305,9 +327,18 @@ $(document).ready(function() {
             return 0;
         };
 
+        // Filter education items to include only those marked for PDF
+        var activeEducation = education.filter(function(edu) {
+            return edu['includeInPdf'] !== false;
+        });
+
+        if (!activeEducation.length) {
+            return 0;
+        }
+
         content.push(sectionHeading('Diplomaed Education'));
 
-        $.each(education, function(i, edu) {
+        $.each(activeEducation, function(i, edu) {
             content.push({
                 stack: [
                   {
@@ -335,9 +366,18 @@ $(document).ready(function() {
           return 0;
       };
 
+      // Filter other education items to include only those marked for PDF
+      var activeEducation = otherEducation.filter(function(edu) {
+          return edu['includeInPdf'] !== false;
+      });
+
+      if (!activeEducation.length) {
+          return 0;
+      }
+
       content.push(sectionHeading('Other Education'));
 
-      $.each(otherEducation, function(i, edu) {
+      $.each(activeEducation, function(i, edu) {
           content.push({
               stack: [
                 {
