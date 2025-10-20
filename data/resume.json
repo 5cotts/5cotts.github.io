@@ -1,212 +1,240 @@
 {
-    "name": "Scott Schmidt",
-    "title": "Software Engineer",
-    "email": "s@scottschmidt.io",
-    "website": "https://scottschmidt.io",
-    "technicalCompetencies": [
+    "education": [
         {
-            "skill": "CI/CD",
-            "examples": ["CircleCI", "GitHub Actions"],
-            "includeInPdf": false
+            "eduInstitution": "University of Pennsylvania",
+            "eduLevel": "Master's Degree",
+            "eduName": "Computer and Information Technology",
+            "eduUrl": "https://www.upenn.edu/",
+            "endDate": null,
+            "includeInPdf": true,
+            "startDate": "Jan. 2025"
         },
         {
-            "skill": "Cloud",
-            "examples": ["AWS", "Heroku"],
-            "includeInPdf": false
-        },
-        {
-            "skill": "Containers",
-            "examples": ["Docker"],
-            "includeInPdf": false
-        },
-        {
-            "skill": "Data Stores",
-            "examples": ["CSV", "ElasticSearch", "JSON", "Parquet", "PostgreSQL", "Redis"],
-            "includeInPdf": false
-        },
-        {
-            "skill": "Frameworks",
-            "examples": ["Django", "Flask", "Jekyll", "React"],
-            "includeInPdf": false
-        },
-        {
-            "skill": "Languages",
-            "examples": ["Bash", "CSS", "HTML", "JavaScript", "Python", "R", "SQL"],
-            "includeInPdf": false
+            "eduInstitution": "Northeastern University",
+            "eduLevel": "Bachelor's Degree",
+            "eduName": "Economics & Business Administration",
+            "eduUrl": "https://www.northeastern.edu/",
+            "endDate": "Dec. 2018",
+            "includeInPdf": true,
+            "startDate": "Sept. 2013"
         }
     ],
+    "email": "s@scottschmidt.io",
+    "name": "Scott Schmidt",
+    "otherEducation": [
+        {
+            "eduInstitution": "Neo4j",
+            "eduName": "Introduction to Neo4j",
+            "eduUrl": "https://www.dropbox.com/s/knbmfkjhdwmsax5/Neo4j%20-%20Intro%20to%20Neo4j%20Certificate.pdf?dl=0",
+            "includeInPdf": false,
+            "startDate": "Jul. 2019"
+        },
+        {
+            "eduInstitution": "Neo4j",
+            "eduName": "Neo4j Administration",
+            "eduUrl": "https://www.dropbox.com/s/0g9r11066ft7na3/Neo4j%20-%20Neo4j%20Administration.pdf?dl=0",
+            "includeInPdf": false,
+            "startDate": "Jul. 2019"
+        },
+        {
+            "eduInstitution": "Harvard Extension School",
+            "eduName": "Pre-calculus, Calculus I/II, and Statistical Modeling",
+            "eduUrl": "https://extension.harvard.edu/",
+            "endDate": "May 2019",
+            "includeInPdf": false,
+            "startDate": "June 2018"
+        },
+        {
+            "eduInstitution": "DataCamp",
+            "eduName": "Introduction to Functions in Python",
+            "eduUrl": "https://www.datacamp.com/statement-of-accomplishment/course/2268d5220be8b5d8c3ed42a9c39136f9aae34612",
+            "includeInPdf": false,
+            "startDate": "Mar. 2019"
+        },
+        {
+            "eduInstitution": "DataCamp",
+            "eduName": "Intermediate Python",
+            "eduUrl": "https://www.datacamp.com/statement-of-accomplishment/course/494e9a5cc43765808b8586fadf14f1a4f9e00f42",
+            "includeInPdf": false,
+            "startDate": "Feb. 2019"
+        },
+        {
+            "eduInstitution": "DataCamp",
+            "eduName": "Intermediate SQL Queries",
+            "eduUrl": "https://www.datacamp.com/statement-of-accomplishment/course/cfe570ca4b5e87d9677ea89357e68d9a8fd437f3",
+            "includeInPdf": false,
+            "startDate": "Feb. 2019"
+        },
+        {
+            "eduInstitution": "DataCamp",
+            "eduName": "Introduction to Python",
+            "eduUrl": "https://www.datacamp.com/statement-of-accomplishment/course/c2d57f4d2145cbb950405789b6db0702e6be4bd2",
+            "includeInPdf": false,
+            "startDate": "Feb. 2019"
+        },
+        {
+            "eduInstitution": "Johns Hopkins University on Coursera",
+            "eduName": "The Data Scientist's Toolbox",
+            "eduUrl": "https://coursera.org/share/9b2fda0e2b5084edb39b5ddd526eafe2",
+            "includeInPdf": false,
+            "startDate": "Jan. 2018"
+        },
+        {
+            "eduInstitution": "The London School of Economics and Political Science - Summer School",
+            "eduName": "Finance, Political Economy, and Economics",
+            "eduUrl": "https://www.lse.ac.uk/",
+            "endDate": "Summer 2017",
+            "includeInPdf": false,
+            "startDate": "Summer 2016"
+        }
+    ],
+    "technicalCompetencies": [
+        {
+            "examples": [
+                "CircleCI",
+                "GitHub Actions"
+            ],
+            "includeInPdf": false,
+            "skill": "CI/CD"
+        },
+        {
+            "examples": [
+                "AWS",
+                "Heroku"
+            ],
+            "includeInPdf": false,
+            "skill": "Cloud"
+        },
+        {
+            "examples": [
+                "Docker"
+            ],
+            "includeInPdf": false,
+            "skill": "Containers"
+        },
+        {
+            "examples": [
+                "CSV",
+                "ElasticSearch",
+                "JSON",
+                "Parquet",
+                "PostgreSQL",
+                "Redis"
+            ],
+            "includeInPdf": false,
+            "skill": "Data Stores"
+        },
+        {
+            "examples": [
+                "Django",
+                "Flask",
+                "Jekyll",
+                "React"
+            ],
+            "includeInPdf": false,
+            "skill": "Frameworks"
+        },
+        {
+            "examples": [
+                "Bash",
+                "CSS",
+                "HTML",
+                "JavaScript",
+                "Python",
+                "R",
+                "SQL"
+            ],
+            "includeInPdf": false,
+            "skill": "Languages"
+        }
+    ],
+    "title": "Software Engineer",
+    "website": "https://scottschmidt.io",
     "workExperience": [
         {
+            "companyBlurb": "Sparrow is the first end-to-end leave management solution for employers. We automate the most painful parts of leave management, saving HR teams 20+ hours of time and up to $30k of cost savings for each leave.",
             "companyName": "Sparrow",
             "companyUrl": "https://trysparrow.com/",
-            "companyBlurb": "Sparrow is the first end-to-end leave management solution for employers. We automate the most painful parts of leave management, saving HR teams 20+ hours of time and up to $30k of cost savings for each leave.",
             "includeBlurbInPdf": false,
+            "includeInPdf": true,
             "positions": [
                 {
-                    "title": "Senior Software Engineer",
-                    "startDate": "April 2024",
-                    "endDate": "",
                     "blurb": "",
                     "bulletPoints": [
                         "Spearheading the engineering effort on Sparrow's custom payroll calculator which has saved customers over {\"text\": \"$100M in payroll costs\", \"link\": \"https://trysparrow.com/blog/sparrow-saved-customers-100-million-in-payroll-costs/\", \"style\": \"link\"} and Sparrow's payroll analyst team hundreds of hours of manual work.",
+                        "Leading a team of 4 engineers, rearchitected Sparrow's payroll system to better scale by changing where key payroll variables are stored, saving payroll analysts 100 hours per month.",
                         "Onboarding engineers to Sparrow's Python payroll library, writing documentation, collaborating with stakeholders, responding to QA, and planning new features.",
                         "Successfully leading multiple payroll initiatives under tight deadlines, meeting VIP customer (ARR >$X00k) needs, and receiving positive feedback from both internal and external stakeholders.",
                         "Cultivating a collaborative and inclusive remote team culture through mentorship, pair programming, and celebrating success openly."
-                    ]
+                    ],
+                    "endDate": "",
+                    "startDate": "April 2024",
+                    "title": "Senior Software Engineer"
                 },
                 {
-                    "title": "Software Engineer",
-                    "startDate": "Sept. 2022",
-                    "endDate": "April 2024",
                     "blurb": "",
                     "bulletPoints": [
-                        "Owned the payroll V2 initiative from initial concept to successful beta with >10 customers, paving the way for its general availability release which is poised to serve >100 customers.",
-                        "Directed overhaul of payroll React.js UI and Django models, enabling custom report generation and scheduled email delivery via Heroku infrastructure. Generated >300 payroll reports as of June 2024.",
+                        "Owned the payroll V2 initiative from initial concept to successful beta with >50 customers, paving the way for its general availability release which is poised to serve >500 customers.",
+                        "Directed overhaul of payroll React.js UI and Django models, enabling custom report generation and scheduled email delivery via Heroku infrastructure. Generated >2500 payroll reports as of October 2025.",
                         "Led redesign of the private disability insurance React.js UI and Django models, boosting data submissions by 30% and increasing insurance-linked employee leaves from 0% to 98%, enabling improved service delivery by Sparrow's leave specialists.",
                         "Enhanced Sparrow's Python payroll library, increasing user efficiency and customer support with new benefit sources, historical benefit support, and multiple salary proration methods."
-                    ]                 
+                    ],
+                    "endDate": "April 2024",
+                    "startDate": "Sept. 2022",
+                    "title": "Software Engineer"
                 }
-            ],
-            "includeInPdf": true
+            ]
         },
         {
+            "companyBlurb": "The Recurse Center is a full-time educational retreat for programmers who want to become dramatically better with a community of peers doing the same.",
             "companyName": "The Recurse Center",
             "companyUrl": "https://www.recurse.com/",
-            "companyBlurb": "The Recurse Center is a full-time educational retreat for programmers who want to become dramatically better with a community of peers doing the same.",
             "includeBlurbInPdf": false,
+            "includeInPdf": false,
             "positions": [
                 {
-                    "title": "Participant",
-                    "startDate": "Feb. 2022",
-                    "endDate": "May 2022",
                     "blurb": "",
                     "bulletPoints": [
                         "With an Arduino, created a device that plugs into a car to read the communication protocol messages between ECUs. Reverse engineered various open source C++ libraries to parse and log messages to serial output. Iterating on further software written with pySerial to download this data for analysis and then send messages back to a car, allowing for control of ECUs.",
                         "Expanded my knowledge of data structures and algorithms by pair programming on 160+ LeetCode problems with other participants. Analyzed and discussed the time/space complexity of our algorithms after each problem.",
                         "Participated in fixing a time zone bug on the Recurse Center's presentations application. Used the opportunity to solve the bug in a group and discuss best practices for becoming familiar with a new codebase, reproducing the bug locally, testing a fix, opening a pull request, and leaving proper documentation for future maintainers."
-                    ]
+                    ],
+                    "endDate": "May 2022",
+                    "startDate": "Feb. 2022",
+                    "title": "Participant"
                 }
-            ],
-            "includeInPdf": false
+            ]
         },
         {
+            "companyBlurb": "WireScreen collects and analyzes data on millions of Chinese businesses to create products which allow users to conduct due diligence, de-risk their supply chains, search for potential business partners, and more.",
             "companyName": "WireScreen",
             "companyUrl": "https://wirescreen.ai/",
-            "companyBlurb": "WireScreen collects and analyzes data on millions of Chinese businesses to create products which allow users to conduct due diligence, de-risk their supply chains, search for potential business partners, and more.",
             "includeBlurbInPdf": false,
+            "includeInPdf": true,
             "positions": [
                 {
-                    "title": "Engineering Team Lead",
-                    "startDate": "Jan. 2020",
-                    "endDate": "Dec. 2021",
                     "blurb": "Working directly under the CTO, I helped lead a small group of engineers. In addition to writing code, I also conducted code reviews, architected new services/features, and acted as liaison between engineering and product teams to help translate business needs into engineering outcomes.",
                     "bulletPoints": [
-                        "Collaborated with product teams to evaluate new features. Conducted exploratory data analysis in Jupyter to assess feasibility and provided reports.",
                         "Created and administered AWS infrastructure for data pipelines, web scrapers, and web apps using DMS, EC2, ECR, ECS, ElastiCache, Elasticsearch, RDS, and S3.",
                         "Constructed CI/CD pipeline using GitHub Actions, cutting deployment time from 20 to <10 minutes. Utilized Docker for containerization.",
                         "Developed internal web apps with Flask, uWSGI, and Jinja. These apps facilitated data submission/editing and coordinated web scrapers, boosting development velocity by enabling direct product contribution without engineering intermediation."
-                    ]
+                    ],
+                    "endDate": "Dec. 2021",
+                    "startDate": "Jan. 2020",
+                    "title": "Engineering Team Lead"
                 },
                 {
-                    "title": "Software Engineer",
-                    "startDate": "Feb. 2019",
-                    "endDate": "Jan. 2020",
                     "blurb": "This was a multi-faceted full stack position where I worked across both research and engineering functions to help build the product using an Agile method of development. With a small team, we built an alpha prototype which led to a seed investment by a venture capital firm.",
                     "bulletPoints": [
                         "Built and scaled Python web scrapers using Selenium, BeautifulSoup, and Requests to retrieve data from multiple sources, completing XX thousand tasks per day.",
                         "Wrote Python scripts for an ETL pipeline processing scraped data, reducing runtime and compute costs by using Python's Multiprocessing library for parallel processing.",
                         "Wrote back-end Python code to integrate a front-end created by an design firm with a Postgres database to create a prototype end-user product, which led to an investment by {\"text\": \"Sequoia Capital\", \"link\": \"https://www.sequoiacap.com/companies/the-wire-digital/\", \"style\": \"link\"}."
-                    ]
+                    ],
+                    "endDate": "Jan. 2020",
+                    "startDate": "Feb. 2019",
+                    "title": "Software Engineer"
                 }
-            ],
-            "includeInPdf": true
-        }
-    ],
-    "education": [
-        {
-            "eduName": "Computer and Information Technology",
-            "eduLevel": "Master's Degree",
-            "eduInstitution": "University of Pennsylvania",
-            "eduUrl": "https://www.upenn.edu/",
-            "startDate": "Jan. 2025",
-            "endDate": null,
-            "includeInPdf": true
-        },
-        {
-            "eduName": "Economics & Business Administration",
-            "eduLevel": "Bachelor's Degree",
-            "eduInstitution": "Northeastern University",
-            "eduUrl": "https://www.northeastern.edu/",
-            "startDate": "Sept. 2013",
-            "endDate": "Dec. 2018",
-            "includeInPdf": true
-        }
-    ],
-    "otherEducation": [
-        {
-            "eduName": "Introduction to Neo4j",
-            "eduInstitution": "Neo4j",
-            "startDate": "Jul. 2019",
-            "eduUrl": "https://www.dropbox.com/s/knbmfkjhdwmsax5/Neo4j%20-%20Intro%20to%20Neo4j%20Certificate.pdf?dl=0",
-            "includeInPdf": false
-        },
-        {
-            "eduName": "Neo4j Administration",
-            "eduInstitution": "Neo4j",
-            "startDate": "Jul. 2019",
-            "eduUrl": "https://www.dropbox.com/s/0g9r11066ft7na3/Neo4j%20-%20Neo4j%20Administration.pdf?dl=0",
-            "includeInPdf": false
-        },
-        {
-            "eduName": "Pre-calculus, Calculus I/II, and Statistical Modeling",
-            "eduInstitution": "Harvard Extension School",
-            "startDate": "June 2018",
-            "endDate": "May 2019",
-            "eduUrl": "https://extension.harvard.edu/",
-            "includeInPdf": false
-        },
-        {
-            "eduName": "Introduction to Functions in Python",
-            "eduInstitution": "DataCamp",
-            "startDate": "Mar. 2019",
-            "eduUrl": "https://www.datacamp.com/statement-of-accomplishment/course/2268d5220be8b5d8c3ed42a9c39136f9aae34612",
-            "includeInPdf": false
-        },
-        {
-            "eduName": "Intermediate Python",
-            "eduInstitution": "DataCamp",
-            "startDate": "Feb. 2019",
-            "eduUrl": "https://www.datacamp.com/statement-of-accomplishment/course/494e9a5cc43765808b8586fadf14f1a4f9e00f42",
-            "includeInPdf": false
-        },
-        {
-            "eduName": "Intermediate SQL Queries",
-            "eduInstitution": "DataCamp",
-            "startDate": "Feb. 2019",
-            "eduUrl": "https://www.datacamp.com/statement-of-accomplishment/course/cfe570ca4b5e87d9677ea89357e68d9a8fd437f3",
-            "includeInPdf": false
-        },
-        {
-            "eduName": "Introduction to Python",
-            "eduInstitution": "DataCamp",
-            "startDate": "Feb. 2019",
-            "eduUrl": "https://www.datacamp.com/statement-of-accomplishment/course/c2d57f4d2145cbb950405789b6db0702e6be4bd2",
-            "includeInPdf": false
-        },
-        {
-            "eduName": "The Data Scientist's Toolbox",
-            "eduInstitution": "Johns Hopkins University on Coursera",
-            "startDate": "Jan. 2018",
-            "eduUrl": "https://coursera.org/share/9b2fda0e2b5084edb39b5ddd526eafe2",
-            "includeInPdf": false
-        },
-        {
-            "eduName": "Finance, Political Economy, and Economics",
-            "eduInstitution": "The London School of Economics and Political Science - Summer School",
-            "startDate": "Summer 2016",
-            "endDate": "Summer 2017",
-            "eduUrl": "https://www.lse.ac.uk/",
-            "includeInPdf": false
+            ]
         }
     ]
 }
