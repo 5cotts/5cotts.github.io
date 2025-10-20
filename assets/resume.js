@@ -188,7 +188,8 @@ $(document).ready(function() {
               style: 'company_name',
             });
 
-            if (job['companyBlurb']) {
+            // Include company blurb if it exists and includeBlurbInPdf is not explicitly false
+            if (job['companyBlurb'] && job['includeBlurbInPdf'] !== false) {
               content.push({ 
                 text: job['companyBlurb'],
                 style: 'blurb',

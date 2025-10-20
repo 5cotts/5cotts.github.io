@@ -40,6 +40,7 @@
             "companyName": "Sparrow",
             "companyUrl": "https://trysparrow.com/",
             "companyBlurb": "Sparrow is the first end-to-end leave management solution for employers. We automate the most painful parts of leave management, saving HR teams 20+ hours of time and up to $30k of cost savings for each leave.",
+            "includeBlurbInPdf": false,
             "positions": [
                 {
                     "title": "Senior Software Engineer",
@@ -72,6 +73,7 @@
             "companyName": "The Recurse Center",
             "companyUrl": "https://www.recurse.com/",
             "companyBlurb": "The Recurse Center is a full-time educational retreat for programmers who want to become dramatically better with a community of peers doing the same.",
+            "includeBlurbInPdf": false,
             "positions": [
                 {
                     "title": "Participant",
@@ -91,6 +93,7 @@
             "companyName": "WireScreen",
             "companyUrl": "https://wirescreen.ai/",
             "companyBlurb": "WireScreen collects and analyzes data on millions of Chinese businesses to create products which allow users to conduct due diligence, de-risk their supply chains, search for potential business partners, and more.",
+            "includeBlurbInPdf": false,
             "positions": [
                 {
                     "title": "Engineering Team Lead",
